@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>Магазин готовых шаблонов Nerds</title>
-
 </head>
 
 <body>
@@ -22,6 +21,7 @@
     </nav>
     <ul>
       <li><a href="#">Корзина</a></li>
+      <!-- изображения символа "корзинка" через background - svg -->
     </ul>
     <!-- блок, который пока не верстаем -->
   </header>
@@ -106,16 +106,43 @@
         ул. Б. Конюшенная, д. 19/8
       </p>
       <p>тел. +7 (812) 275-75-75</p>
-      <button>Напишите нам</button>
+      <button type="button">Напишите нам</button>
+      <!-- может ссылка? -->
     </section>
+    <form>
+      <!-- fieldset тут не нужен получается? fieldset объединяет поля в единый блок для задания ему имени, тут же несколько отдельных пунктов каждый со своим именем -->
+      <h1>Напишите нам</h1>
+      <button type="button" aria-label="Кнопка закрытия формы для связи">
+        <!-- изображение кнопки "крестик" через background - svg -->
+      </button>
+      <ul>
+        <li>
+          <legend>Ваше имя</legend>
+          <input type="text" name="User-name" placeholder="Имя Фамилия">
+        </li>
+
+        <li>
+          <legend>Ваш e-mail</legend>
+          <input type="text" name="User-email" placeholder="example@mail.com">
+        </li>
+
+        <li>
+          <legend>Текст письма</legend>
+          <textarea placeholder="В свободной форме">
+              <!-- значение placeholder не отображается почему-то, а текст это коммента отображается -->
+            </textarea>
+        </li>
+      </ul>
+      <button type="button">Отправить</button>
+    </form>
 
   </main>
 
   <footer>
     <ul class="social-list">
-      <li><a class="social-button" href="#"><img src="img/svg-nerds/vk-icon.svg" alt="Ссылка на Vkontakte"></a></li>
-      <li><a class="social-button" href="#"><img src="img/svg-nerds/fb-icon.svg" alt="Ссылка на Facebook"></a></li>
-      <li><a class="social-button" href="#"><img src="img/svg-nerds/insta-icon.svg" alt="Ссылка на Instagram"></a></li>
+      <li><a class="social-button" href="#" aria-label="Ссылка во Вконтакте"><img src="img/svg-nerds/vk-icon.svg"></a></li>
+      <li><a class="social-button" href="#" aria-label="Ссылка на Фейсбук"><img src="img/svg-nerds/fb-icon.svg"></a></li>
+      <li><a class="social-button" href="#" aria-label="Ссылка в Инстаграм"><img src="img/svg-nerds/insta-icon.svg"></a></li>
     </ul>
     <b>Давайте дружить, это выгодно!</b>
     <p>Скидка 10% для друзей из социальных сетей.</p>

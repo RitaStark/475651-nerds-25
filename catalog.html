@@ -30,13 +30,62 @@
       <!-- тут будет форма -->
       <p>Стоимость</p>
 
-      <!-- тут будет форма -->
-      <p>Сетка</p>
+      <form class="filter" method="" action="">
+        <fieldset>
+          <legend>Сетка</legend>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="grid-type" checked>
+                Адаптивная
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="grid-type">
+                Фиксированная
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="grid-type">
+                Резиновая
+              </label>
+            </li>
+          </ul>
+        </fieldset>
 
-      <!-- тут будет форма -->
-      <p>Особенности</p>
 
-      <button>Показать</button>
+        <fieldset>
+          <legend>Особенности</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="Slider" id="filter-slider" checked>
+              <label for="filter-slider">Слайдер</label>
+            </li>
+            <li>
+              <input type="checkbox" name="Advantage-block" id="filter-advantage-block">
+              <label for="filter-advantage-block">Блок преимуществ</label>
+            </li>
+            <li>
+              <input type="checkbox" name="News" id="filter-news" checked>
+              <label for="filter-news">Новости</label>
+            </li>
+            <li>
+              <input type="checkbox" name="Gallery" id="filter-gallery">
+              <label for="filter-gallery">Галлерея</label>
+            </li>
+            <li>
+              <input type="checkbox" name="Basket" id="filter-basket">
+              <label for="filter-basket">Корзина</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button" type="button">Показать</button>
+      </form>
+
+
+
     </section>
     <section class="sort">
       <p>Сортировать:</p>
@@ -57,10 +106,10 @@
     </section>
 
     <ul>
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">Следующая</a></li>
+      <li><a href="#" aria-label="Первая страница каталога">1</a></li>
+      <li><a href="#" aria-label="Вторая страница каталога">2</a></li>
+      <li><a href="#" aria-label="Третья страница каталога">3</a></li>
+      <li><a href="#" aria-label="Кнопка переключения на следующую страницу каталога">Следующая</a></li>
     </ul>
 
     <section class="address">
@@ -72,13 +121,39 @@
       <p>тел. +7 (812) 275-75-75</p>
       <button>Напишите нам</button>
     </section>
+    <form>
+      <!-- fieldset тут не нужен получается? fieldset объединяет поля в единый блок для задания ему имени, тут же несколько отдельных блочков каждый со своим именем -->
+      <h1>Напишите нам</h1>
+      <button type="button" aria-label="Кнопка закрытия формы для связи">
+        <!-- изображение кнопки "крестик" через background - svg -->
+      </button>
+      <ul>
+        <li>
+          <legend>Ваше имя</legend>
+          <input type="text" name="User-name" placeholder="Имя Фамилия">
+        </li>
+
+        <li>
+          <legend>Ваш e-mail</legend>
+          <input type="text" name="User-email" placeholder="example@mail.com">
+        </li>
+
+        <li>
+          <legend>Текст письма</legend>
+          <textarea placeholder="В свободной форме">
+                <!-- значение placegolder не отображается почему-то, а текст это коммента отображается -->
+              </textarea>
+        </li>
+      </ul>
+      <button type="button">Отправить</button>
+    </form>
   </main>
 
   <footer>
     <ul class="social-list">
-      <li><a class="social-button" href="#"><img src="img/svg-nerds/vk-icon.svg"></a></li>
-      <li><a class="social-button" href="#"><img src="img/svg-nerds/fb-icon.svg"></a></li>
-      <li><a class="social-button" href="#"><img src="img/svg-nerds/insta-icon.svg"></a></li>
+      <li><a class="social-button" href="#" aria-label="Ссылка во Вконтакте"><img src="img/svg-nerds/vk-icon.svg"></a></li>
+      <li><a class="social-button" href="#" aria-label="Ссылка на Фейсбук"><img src="img/svg-nerds/fb-icon.svg"></a></li>
+      <li><a class="social-button" href="#" aria-label="Ссылка в Инстаграм"><img src="img/svg-nerds/insta-icon.svg"></a></li>
     </ul>
     <b>Давайте дружить, это выгодно!</b>
     <p>Скидка 10% для друзей из социальных сетей.</p>
