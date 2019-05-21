@@ -3,6 +3,9 @@
 
 <head>
   <meta charset="utf-8">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   <title>Магазин готовых шаблонов Nerds</title>
 </head>
 
@@ -18,12 +21,13 @@
         <li><a href="#">Магазин</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>
+
+      <ul>
+        <li><a href="#">Корзина</a></li>
+        <!-- изображения символа "корзинка" через background - svg -->
+      </ul>
+      <!-- блок, который пока не верстаем -->
     </nav>
-    <ul>
-      <li><a href="#">Корзина</a></li>
-      <!-- изображения символа "корзинка" через background - svg -->
-    </ul>
-    <!-- блок, который пока не верстаем -->
   </header>
 
   <main>
@@ -53,7 +57,7 @@
       </ul>
     </section>
     <section class="about-us">
-      <div>
+      <div class="left-col">
         <h1>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h1>
         <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не
           покладая рук, как роботы.</p>
@@ -64,7 +68,7 @@
           <li>Слайдшоу и видео для корпоративных презентаций</li>
         </ul>
       </div>
-      <div>
+      <div class="right-col">
         <img src="img/nerds-illustration.png" alt="Логотип студии Nerds">
         <p>с 2004 года Любим точность во всем:</p>
         <ul>

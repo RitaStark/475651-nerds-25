@@ -1,0 +1,143 @@
+body {
+    margin:0;
+    padding:0;
+    font-family: "Roboto", Arial, sans-serif;
+}
+header {
+    background-color:#eeeeee;
+}
+
+a {
+    text-decoration:none;
+    color:#000000;
+}
+li {
+    list-style-type: none;
+}
+
+.main-menu li {
+    text-transform:uppercase;
+    font-size:16px;
+    line-height: 30px;
+}
+.segment-list h3 {
+    text-transform: uppercase;
+    font-size:24px;
+    line-height:30px;
+    font-weight: 700;
+}
+
+.segment-list p {
+    font-weight: 400;
+}
+
+.segment-list a {
+    text-transform: uppercase;
+    font-weight: 400;
+    color:#ffffff;
+    padding:19px 40px;
+    border-radius: 3px;
+}
+/* веб-сайты */
+.segments ul li:first-child a {
+    background-color:#fb565a;
+}
+.segments ul li:first-child {
+    background-image:url(img/illustration-1.jpg);
+    background-repeat: no-repeat;
+}
+
+/* приложения */
+.segments ul li:nth-child(2) a {
+    background-color:#00ca74;
+}
+.segments ul li:nth-child(2) {
+    background-image:url(img/illustration-2.jpg);
+    background-repeat: no-repeat;
+}
+
+/* презентации */
+.segments ul li:nth-child(3) a {
+    background-color:#efc84a;
+}
+.segments ul li:nth-child(3) {
+    background-image:url(img/illustration-3.jpg);
+    background-repeat: no-repeat;
+}
+
+.about-us h1 {
+    font-weight: 700;
+    font-size:45px;
+    line-height: 45px;
+}
+.left-col p{
+    font-size:16px;
+    line-height: 24px;
+}
+.left-col h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color:#000000;
+}
+.left-col ul li{ /*расстрояние между строками увеличивать паддингами?*/
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color:#283136;
+}
+
+.right-col > p {
+    text-transform: uppercase;
+    font-size:16px;
+    line-height:24px;
+}
+.right-col ul p:first-child {
+    font-size:45px;
+    line-height: 10.06px;
+    font-weight: 700;
+}
+.right-col ul p:nth-child(2) {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.clients img {
+    opacity: 0.2;
+}
+
+.address {
+    background-image: url(img/map-and-marker.jpg);
+    background-repeat: no-repeat;
+    height:416px; /*указатель оказывается вне видимости*/
+}
+
+/* как сделать белый фон у адреса на фоне карты не знаю */
+.address h2 {
+    text-transform: uppercase;
+    font-size:18px;
+    line-height:30px;
+    color:#000000;
+}
+
+.address p {
+    font-size: 16px;
+    line-height: 18px;
+    color:#666666;
+}
+.address p:nth-child(3) { /* тут же по идее 2-ой ребенок должен быть указан, но отодвигает не так. либо селектор не правильно обозван?*/
+    margin-bottom: 40px;
+}
+
+.address a {
+    text-transform: uppercase;
+    background-color:#fb565a;
+    color:#ffffff;
+    padding:19px 50px;
+    border-radius: 3px; /* как определить скругление точно не знаю */
+}
+
+.social-list a{
+    background-color:#e1e1e1;
+}
