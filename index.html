@@ -108,28 +108,29 @@
       <p>тел. +7 (812) 275-75-75</p>
       <a href="#" aria-label="Ссылка на форму связи">Напишите нам</a>
     </section>
-    <form>
-      <!-- fieldset тут не нужен получается? fieldset объединяет поля в единый блок для задания ему имени, тут же несколько отдельных пунктов каждый со своим именем -->
+    <form method="post" action="https://echo.htmlacademy.ru">
       <h1>Напишите нам</h1>
-      <button type="button" aria-label="Кнопка закрытия формы для связи">
-        <!-- изображение кнопки "крестик" через background - svg -->
-      </button>
+      <button type="button" aria-label="Кнопка закрытия формы для связи">X</button>
+      <!-- изображение кнопки "крестик" через background - svg -->
       <ul>
         <li>
-          <legend>Ваше имя</legend>
-          <input type="text" name="User-name" placeholder="Имя Фамилия">
+          <label>
+            Ваше имя
+            <input type="text" name="user-data" placeholder="Имя Фамилия">
+          </label>
         </li>
 
         <li>
-          <legend>Ваш e-mail</legend>
-          <input type="text" name="User-email" placeholder="example@mail.com">
+          <label>
+            Ваш e-mail
+            <input type="text" name="user-data" placeholder="example@mail.com">
+          </label>
         </li>
 
         <li>
-          <legend>Текст письма</legend>
-          <textarea placeholder="В свободной форме">
-              <!-- значение placeholder не отображается почему-то, а текст это коммента отображается -->
-            </textarea>
+          <label>Текст письма
+            <textarea name="user-data" placeholder="В свободной форме"></textarea>
+          </label>
         </li>
       </ul>
       <button type="submit">Отправить</button>
