@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   <title>Магазин готовых шаблонов Nerds</title>
 </head>
@@ -12,18 +12,18 @@
 <body>
   <header>
     <nav class="main-menu">
-      <a>
+      <a href="#" class="nerds-logo">
         <img src="img/svg-nerds/nerds-logo.svg" alt="Логотип студии Nerds">
       </a>
       <ul>
-        <li><a href="#">Студия</a></li>
-        <li><a href="#">Клиенты</a></li>
-        <li><a href="#">Магазин</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a href="#" class="main-menu-list"><span class="active-underline">Студия</span></a></li>
+        <li><a href="#" class="main-menu-list">Клиенты</a></li>
+        <li><a href="catalog.html" class="main-menu-list">Магазин</a></li>
+        <li><a href="#" class="main-menu-list">Контакты</a></li>
       </ul>
 
       <ul>
-        <li><a href="#">Корзина</a></li>
+        <li><a href="#" class="main-menu-list" class="main-menu-cart">Корзина</a></li>
         <!-- изображения символа "корзинка" через background - svg -->
       </ul>
       <!-- блок, который пока не верстаем -->
@@ -33,26 +33,23 @@
   <main>
     <section class="segments">
       <ul class="segment-list">
-        <li>
-          <!-- картинка через background jpg-->
+        <li class="segment-list-item segment-item-wed">
           <img src="" alt="Шаблоны для Веб-сайтов">
           <h3>Веб-сайты</h3>
           <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-          <a href="http://nerds.armstud.ru/catalog.html">Заказать</a>
+          <a href="http://nerds.armstud.ru/catalog.html" class="segment-order">Заказать</a>
         </li>
-        <li>
-          <!-- картинка через background jpg-->
-          <img src="" alt="Приложения для мобльных устройств">
+        <li class="segment-list-item segment-item-app">
+          <img src="" alt="Приложения для мобильных устройств">
           <h3>Приложения</h3>
           <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-          <a href="http://nerds.armstud.ru/catalog.html">Заказать</a>
+          <a href="http://nerds.armstud.ru/catalog.html" class="segment-order">Заказать</a>
         </li>
-        <li>
-          <!-- картинка через background jpg-->
+        <li class="segment-list-item segment-item-presentations">
           <img src="" alt="Шаблоны презентаций Презентаций">
           <h3>Презентации</h3>
           <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-          <a href="http://nerds.armstud.ru/catalog.html">Заказать</a>
+          <a href="http://nerds.armstud.ru/catalog.html" class="segment-order">Заказать</a>
         </li>
       </ul>
     </section>
@@ -63,26 +60,26 @@
           покладая рук, как роботы.</p>
         <h3>Выполняем заказы на разработку:</h3>
         <ul>
-          <li>Веб-сайтов любой сложности</li>
-          <li>Мобильных приложений для iOS и Android</li>
-          <li>Слайдшоу и видео для корпоративных презентаций</li>
+          <li class="left-col-text-list">Веб-сайтов любой сложности</li>
+          <li class="left-col-text-list">Мобильных приложений для iOS и Android</li>
+          <li class="left-col-text-list">Слайдшоу и видео для корпоративных презентаций</li>
         </ul>
       </div>
       <div class="right-col">
         <img src="img/nerds-illustration.png" alt="Логотип студии Nerds">
         <p>с 2004 года Любим точность во всем:</p>
-        <ul>
-          <li>
-            <p>146%</p>
-            <p>Уровень самоотдачи</p>
+        <ul class="right-col-list">
+          <li class="right-col-list-item">
+            <p class="right-col-item-mark">146<span class="super">%</span></p>
+            <p class="right-col-item-name">Уровень самоотдачи</p>
           </li>
+          <li class="right-col-list-item">
+            <p class="right-col-item-mark">100<span class="super">%</span></p>
+            <p class="right-col-item-name">Соблюдение сроков</p>
+          </li class="right-col-list-item">
           <li>
-            <p>100%</p>
-            <p>Соблюдение сроков</p>
-          </li>
-          <li>
-            <p>50%</p>
-            <p>Минимальная предоплата</p>
+            <p class="right-col-item-mark">50<span class="super">%</span></p>
+            <p class="right-col-item-name">Минимальная предоплата</p>
           </li>
         </ul>
       </div>
@@ -90,66 +87,76 @@
     <section class="clients">
       <ul class="clients-list">
         <li>
-          <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.png" alt="Логотип HTMLAcademy"></a>
+          <a href="https://htmlacademy.ru" class="client-logo"><img src="img/logo-htmlacademy.png" alt="Логотип HTMLAcademy"
+              class="client-logo"></a>
         </li>
         <li>
-          <a href="http://barbershop-borodinski.webflow.io/"><img src="img/logo-borodinski.png" alt="Логотип Барбершоп Бородинский"></a>
+          <a href="http://barbershop-borodinski.webflow.io/"><img src="img/logo-borodinski.png" alt="Логотип Барбершоп Бородинский"
+              class="client-logo"></a>
         </li>
         <li>
-          <a href="#"><img src="img/logo-pink.png" alt="Логотип компании Pink"></a>
+          <a href="#"><img src="img/logo-pink.png" alt="Логотип компании Pink" class="client-logo"></a>
         </li>
         <li>
-          <a href="#"><img src="img/logo-mishka.png" alt="Логотип компании Mishka"></a>
+          <a href="#"><img src="img/logo-mishka.png" alt="Логотип компании Mishka" class="client-logo"></a>
         </li>
       </ul>
     </section>
     <section class="address">
       <!-- карта с маркером через background jpg -->
-      <h2>NЁRDS DESIGN STUDIO</h2>
-      <p>191186, Санкт-Петербург,<br>
-        ул. Б. Конюшенная, д. 19/8
-      </p>
-      <p>тел. +7 (812) 275-75-75</p>
-      <a href="#" aria-label="Ссылка на форму связи">Напишите нам</a>
+      <section class="address-details">
+        <h2>NЁRDS DESIGN STUDIO</h2>
+        <p>191186, Санкт-Петербург,<br>
+          ул. Б. Конюшенная, д. 19/8
+        </p>
+        <p class="address-tel">тел. +7 (812) 275-75-75</p>
+        <a href="#" aria-label="Ссылка на форму связи">Напишите нам</a>
+      </section>
     </section>
-    <form method="post" action="https://echo.htmlacademy.ru">
-      <h1>Напишите нам</h1>
+
+    <form method="post" action="https://echo.htmlacademy.ru" class="none">
+      <h1 class="write-us-header">Напишите нам</h1>
       <button type="button" aria-label="Кнопка закрытия формы для связи">X</button>
       <!-- изображение кнопки "крестик" через background - svg -->
       <ul>
         <li>
-          <label>
+          <label class="write-us-item">
             Ваше имя
             <input type="text" name="user-name" placeholder="Имя Фамилия">
           </label>
         </li>
 
         <li>
-          <label>
+          <label class="write-us-item">
             Ваш e-mail
             <input type="text" name="user-email" placeholder="example@mail.com">
           </label>
         </li>
 
         <li>
-          <label>Текст письма
+          <label class="write-us-item">Текст письма
             <textarea name="user-text" placeholder="В свободной форме"></textarea>
           </label>
         </li>
       </ul>
-      <button type="submit">Отправить</button>
+      <button type="submit" class="button-write-us">Отправить</button>
     </form>
 
   </main>
 
   <footer>
+
     <ul class="social-list">
-      <li><a class="social-button" href="#" aria-label="Ссылка во Вконтакте"><img src="img/svg-nerds/vk-icon.svg"></a></li>
-      <li><a class="social-button" href="#" aria-label="Ссылка на Фейсбук"><img src="img/svg-nerds/fb-icon.svg"></a></li>
-      <li><a class="social-button" href="#" aria-label="Ссылка в Инстаграм"><img src="img/svg-nerds/insta-icon.svg"></a></li>
+      <div class="social-button-list">
+        <li class="social-icon"><a class="social-button" href="#" aria-label="Ссылка во Вконтакте"><img src="img/svg-nerds/vk-icon.svg"
+              class="social-img"></a></li>
+        <li class="social-icon"><a class="social-button" href="#" aria-label="Ссылка на Фейсбук"><img src="img/svg-nerds/fb-icon.svg"></a></li>
+        <li class="social-icon"><a class="social-button" href="#" aria-label="Ссылка в Инстаграм"><img src="img/svg-nerds/insta-icon.svg"></a></li>
+      </div>
     </ul>
-    <b>Давайте дружить, это выгодно!</b>
-    <p>Скидка 10% для друзей из социальных сетей.</p>
+
+    <b class="motto">Давайте дружить, это выгодно!</b>
+    <p class="special-offer">Скидка 10% для друзей из социальных сетей.</p>
   </footer>
 
 

@@ -3,91 +3,39 @@
 
 <head>
   <meta charset="utf-8">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   <title>Магазин готовых шаблонов Nerds</title>
 </head>
 
-<body>
+<body class="inner-page">
   <header>
     <nav class="main-menu">
-      <a href="index.html">
+      <a href="index.html" class="nerds-logo">
         <img src="img/svg-nerds/nerds-logo.svg" alt="Логотип студии Nerds">
       </a>
+      <ul class="menu">
+        <li><a href="#" class="main-menu-list">Студия</a></li>
+        <li><a href="#" class="main-menu-list">Клиенты</a></li>
+        <li><a href="#" class="main-menu-list">Магазин</a></li>
+        <li><a href="#" class="main-menu-list">Контакты</a></li>
+      </ul>
       <ul>
-        <li><a href="#">Студия</a></li>
-        <li><a href="#">Клиенты</a></li>
-        <li><a href="#">Магазин</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a href="#">Корзина</a></li>
       </ul>
     </nav>
-    <ul>
-      <li><a href="#">Корзина</a></li>
-    </ul>
     <h1>Магазин готовых шаблонов</h1>
   </header>
 
   <main>
     <section class="parameter">
       <form class="filter" method="post" action="https://echo.htmlacademy.ru">
-        <fieldset>
-          <legend>Сетка</legend>
-          <ul>
-            <li>
-              <label>
-                <input type="radio" name="grid-type" value="адаптивная" checked>
-                Адаптивная
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="radio" name="grid-type" value="фиксированная">
-                Фиксированная
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="radio" name="grid-type" value="резиновая">
-                Резиновая
-              </label>
-            </li>
-          </ul>
-          <!-- эту часть пока не трогаем -->
-          <p>Стоимость</p>
-        </fieldset>
-
-
-        <fieldset>
-          <legend>Особенности</legend>
-          <ul>
-            <li>
-              <input type="checkbox" name="features" id="filter-slider" value="slider" checked>
-              <label for="filter-slider">Слайдер</label>
-            </li>
-            <li>
-              <input type="checkbox" name="features" id="filter-advantage-block" value="advantage-block">
-              <label for="filter-advantage-block">Блок преимуществ</label>
-            </li>
-            <li>
-              <input type="checkbox" name="features" id="filter-news" value="news" checked>
-              <label for="filter-news">Новости</label>
-            </li>
-            <li>
-              <input type="checkbox" name="features" value="gallery" id="filter-gallery">
-              <label for="filter-gallery">Галлерея</label>
-            </li>
-            <li>
-              <input type="checkbox" name="features" value="basket" id="filter-basket">
-              <label for="filter-basket">Корзина</label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="button" type="submit">Показать</button>
-      </form>
-
-
-
     </section>
     <section class="sort">
-      <p>Сортировать:</p>
+      <!-- эту часть пока не трогаем -->
+      <p class="filter-name filter-gap">Стоимость:</p>
+      <p class="filter-name">Сортировать:</p>
       <ul>
         <li>по цене</li>
         <li>по типу</li>
@@ -95,6 +43,63 @@
         <!-- стрелочки -->
       </ul>
     </section>
+
+    <fieldset class="filter-gap">
+      <legend class="filter-name">Сетка:</legend>
+      <ul>
+        <li class="filter-item">
+          <label>
+            <input type="radio" name="grid-type" value="адаптивная" checked class="filter-type">
+            Адаптивная
+          </label>
+        </li>
+        <li class="filter-item">
+          <label>
+            <input type="radio" name="grid-type" value="фиксированная">
+            Фиксированная
+          </label>
+        </li>
+        <li class="filter-item">
+          <label>
+            <input type="radio" name="grid-type" value="резиновая">
+            Резиновая
+          </label>
+        </li>
+      </ul>
+    </fieldset>
+
+
+    <fieldset class="filter-gap">
+      <legend class="filter-name">Особенности:</legend>
+      <ul>
+        <li class="filter-item">
+          <input type="checkbox" name="features" id="filter-slider" value="slider" checked>
+          <label for="filter-slider">Слайдер</label>
+        </li>
+        <li class="filter-item">
+          <input type="checkbox" name="features" id="filter-advantage-block" value="advantage-block">
+          <label for="filter-advantage-block">Блок преимуществ</label>
+        </li>
+        <li class="filter-item">
+          <input type="checkbox" name="features" id="filter-news" value="news" checked>
+          <label for="filter-news">Новости</label>
+        </li>
+        <li class="filter-item">
+          <input type="checkbox" name="features" value="gallery" id="filter-gallery">
+          <label for="filter-gallery">Галерея</label>
+        </li>
+        <li class="filter-item">
+          <input type="checkbox" name="features" value="basket" id="filter-basket">
+          <label for="filter-basket">Корзина</label>
+        </li>
+      </ul>
+    </fieldset>
+    <button class="button button-filter-show" type="submit">Показать</button>
+    </form>
+
+
+
+
     <section class="examples">
       <img src="img/img-sedona.jpg" alt="Макет сайта туристичской компании Sedona">
       <img src="img/img-pink.jpg" alt="Макет сайта компании Pink">
@@ -104,60 +109,64 @@
       <img src="img/img-kvast.jpg" alt="Макет сайта производителя кваса Кваст">
     </section>
 
-    <ul>
-      <li><a href="#" aria-label="Первая страница каталога">1</a></li>
-      <li><a href="#" aria-label="Вторая страница каталога">2</a></li>
-      <li><a href="#" aria-label="Третья страница каталога">3</a></li>
-      <li><a href="#" aria-label="Кнопка переключения на следующую страницу каталога">Следующая</a></li>
+    <ul class="button-list">
+      <li class="button-one"><a href="#" aria-label="Первая страница каталога">1</a></li>
+      <li class="button-two"><a href="#" aria-label="Вторая страница каталога">2</a></li>
+      <li class="button-three"><a href="#" aria-label="Третья страница каталога">3</a></li>
+      <li class="button-next"><a href="#" aria-label="Кнопка переключения на следующую страницу каталога">Следующая</a></li>
     </ul>
 
     <section class="address">
-      <!-- карта с маркером через background jpg -->
-      <h2>NЁRDS DESIGN STUDIO</h2>
-      <p>191186, Санкт-Петербург,<br>
-        ул. Б. Конюшенная, д. 19/8
-      </p>
-      <p>тел. +7 (812) 275-75-75</p>
-      <a href="#" aria-label="Ссылка на форму связи">Напишите нам</a>
+      <section class="address-details">
+        <h2>NЁRDS DESIGN STUDIO</h2>
+        <p>191186, Санкт-Петербург,<br>
+          ул. Б. Конюшенная, д. 19/8
+        </p>
+        <p class="address-tel">тел. +7 (812) 275-75-75</p>
+        <a href="#" aria-label="Ссылка на форму связи">Напишите нам</a>
+      </section>
     </section>
 
-    <form method="post" action="https://echo.htmlacademy.ru">
-      <h1>Напишите нам</h1>
+    <form method="post" action="https://echo.htmlacademy.ru" class="none">
+      <h1 class="write-us-header">Напишите нам</h1>
       <button type="button" aria-label="Кнопка закрытия формы для связи">X</button>
       <!-- изображение кнопки "крестик" через background - svg -->
       <ul>
         <li>
-          <label>
+          <label class="write-us-item">
             Ваше имя
             <input type="text" name="user-name" placeholder="Имя Фамилия">
           </label>
         </li>
 
         <li>
-          <label>
+          <label class="write-us-item">
             Ваш e-mail
             <input type="text" name="user-email" placeholder="example@mail.com">
           </label>
         </li>
 
         <li>
-          <label>Текст письма
+          <label class="write-us-item">Текст письма
             <textarea name="user-text" placeholder="В свободной форме"></textarea>
           </label>
         </li>
       </ul>
-      <button type="submit">Отправить</button>
+      <button type="submit" class="button-write-us">Отправить</button>
     </form>
   </main>
 
   <footer>
     <ul class="social-list">
-      <li><a class="social-button" href="#" aria-label="Ссылка во Вконтакте"><img src="img/svg-nerds/vk-icon.svg"></a></li>
-      <li><a class="social-button" href="#" aria-label="Ссылка на Фейсбук"><img src="img/svg-nerds/fb-icon.svg"></a></li>
-      <li><a class="social-button" href="#" aria-label="Ссылка в Инстаграм"><img src="img/svg-nerds/insta-icon.svg"></a></li>
+      <div class="social-button-list">
+        <li class="social-icon"><a class="social-button" href="#" aria-label="Ссылка во Вконтакте"><img src="img/svg-nerds/vk-icon.svg"></a></li>
+        <li class="social-icon"><a class="social-button" href="#" aria-label="Ссылка на Фейсбук"><img src="img/svg-nerds/fb-icon.svg"></a></li>
+        <li class="social-icon"><a class="social-button" href="#" aria-label="Ссылка в Инстаграм"><img src="img/svg-nerds/insta-icon.svg"></a></li>
+      </div>
     </ul>
-    <b>Давайте дружить, это выгодно!</b>
-    <p>Скидка 10% для друзей из социальных сетей.</p>
+
+    <b class="motto">Давайте дружить, это выгодно!</b>
+    <p class="special-offer">Скидка 10% для друзей из социальных сетей.</p>
   </footer>
 
 
