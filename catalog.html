@@ -25,7 +25,7 @@
           </ul>
 
           <ul class="user-navigation ls-none">
-            <li><a href="#" class="main-menu-list main-menu-cart">Корзина</a></li>
+            <li><a href="#" class="main-menu-cart">Корзина</a></li>
             <!-- изображения символа "корзинка" через background - svg -->
           </ul>
         </div>
@@ -38,13 +38,75 @@
     <div class="main-wrapper">
       <section class="parameter">
         <form class="filter" method="post" action="https://echo.htmlacademy.ru">
+          <div class="filter-container">
+
+            <fieldset class="filter-gap">
+              <legend class="sort-name filter-gap">Стоимость:</legend>
+              <ul class="sort-list ls-none">
+                <li class="filter-item"></li>
+                от <input type="text"><br> <!-- это временно, пока не знаю как сделать правильно -->
+                до <input type="text">
+              </ul>
+            </fieldset>
+
+            <fieldset class="filter-gap">
+              <legend class="sort-name">Сетка:</legend>
+              <ul class="sort-list ls-none">
+                <li class="filter-item">
+                  <label>
+                    <input type="radio" name="grid-type" value="адаптивная" checked class="filter-type">
+                    Адаптивная
+                  </label>
+                </li>
+                <li class="filter-item">
+                  <label>
+                    <input type="radio" name="grid-type" value="фиксированная">
+                    Фиксированная
+                  </label>
+                </li>
+                <li class="filter-item">
+                  <label>
+                    <input type="radio" name="grid-type" value="резиновая">
+                    Резиновая
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+
+            <fieldset class="filter-gap">
+              <legend class="sort-name">Особенности:</legend>
+              <ul class="sort-list ls-none">
+                <li class="filter-item">
+                  <input type="checkbox" name="features" id="filter-slider" value="slider" checked>
+                  <label for="filter-slider">Слайдер</label>
+                </li>
+                <li class="filter-item">
+                  <input type="checkbox" name="features" id="filter-advantage-block" value="advantage-block">
+                  <label for="filter-advantage-block">Блок преимуществ</label>
+                </li>
+                <li class="filter-item">
+                  <input type="checkbox" name="features" id="filter-news" value="news" checked>
+                  <label for="filter-news">Новости</label>
+                </li>
+                <li class="filter-item">
+                  <input type="checkbox" name="features" value="gallery" id="filter-gallery">
+                  <label for="filter-gallery">Галерея</label>
+                </li>
+                <li class="filter-item">
+                  <input type="checkbox" name="features" value="basket" id="filter-basket">
+                  <label for="filter-basket">Корзина</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="button button-filter-show text-option-usual" type="submit">Показать</button>
+        </form>
       </section>
-      <div class="filter-container">
+
+      <div class="catalog-right-col">
         <section class="sort">
-          <!-- эту часть пока не трогаем -->
-          <p class="sort-name filter-gap">Стоимость:</p>
           <p class="sort-name">Сортировать:</p>
-          <ul class="sort-list ls-none">
+          <ul class="sort-type-list ls-none">
             <li><a class="sort-type" href="#">по цене</a></li>
             <li><a class="sort-type" href="#">по типу</a></li>
             <li><a class="sort-type" href="#">по названию</a></li>
@@ -52,79 +114,27 @@
           </ul>
         </section>
 
-        <fieldset class="filter-gap">
-          <legend class="sort-name">Сетка:</legend>
-          <ul class="sort-list ls-none">
-            <li class="filter-item">
-              <label>
-                <input type="radio" name="grid-type" value="адаптивная" checked class="filter-type">
-                Адаптивная
-              </label>
-            </li>
-            <li class="filter-item">
-              <label>
-                <input type="radio" name="grid-type" value="фиксированная">
-                Фиксированная
-              </label>
-            </li>
-            <li class="filter-item">
-              <label>
-                <input type="radio" name="grid-type" value="резиновая">
-                Резиновая
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+        <section class="examples">
+          <div class="examples-container">
+            <img class="example-item" src="img/img-sedona.jpg" alt="Макет сайта туристичской компании Sedona">
+            <img class="example-item" src="img/img-pink.jpg" alt="Макет сайта компании Pink">
+            <img class="example-item" src="img/img-barbershop.jpg" alt="Макет сайта Барбершопа Бородинский">
+            <img class="example-item" src="img/img-mishka.jpg" alt="Макет сайта магазина вязаных игрушек Mishka">
+            <img class="example-item" src="img/img-aplus.jpg" alt="Макет сайта курсов А+">
+            <img class="example-item" src="img/img-kvast.jpg" alt="Макет сайта производителя кваса Кваст">
+          </div>
+        </section>
 
-
-        <fieldset class="filter-gap">
-          <legend class="sort-name">Особенности:</legend>
-          <ul class="sort-list ls-none">
-            <li class="filter-item">
-              <input type="checkbox" name="features" id="filter-slider" value="slider" checked>
-              <label for="filter-slider">Слайдер</label>
-            </li>
-            <li class="filter-item">
-              <input type="checkbox" name="features" id="filter-advantage-block" value="advantage-block">
-              <label for="filter-advantage-block">Блок преимуществ</label>
-            </li>
-            <li class="filter-item">
-              <input type="checkbox" name="features" id="filter-news" value="news" checked>
-              <label for="filter-news">Новости</label>
-            </li>
-            <li class="filter-item">
-              <input type="checkbox" name="features" value="gallery" id="filter-gallery">
-              <label for="filter-gallery">Галерея</label>
-            </li>
-            <li class="filter-item">
-              <input type="checkbox" name="features" value="basket" id="filter-basket">
-              <label for="filter-basket">Корзина</label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="button button-filter-show text-option-usual" type="submit">Показать</button>
-        </form>
+        <ul class="button-list ls-none">
+          <li class="button-one"><a href="#" aria-label="Первая страница каталога">1</a></li>
+          <li class="button-two"><a href="#" aria-label="Вторая страница каталога">2</a></li>
+          <li class="button-three"><a href="#" aria-label="Третья страница каталога">3</a></li>
+          <li class="button-next text-option-usual"><a href="#" aria-label="Кнопка переключения на следующую страницу каталога">Следующая</a></li>
+        </ul>
       </div>
-
-
-      <section class="examples">
-        <div class="examples-container">
-          <img class="example-item" src="img/img-sedona.jpg" alt="Макет сайта туристичской компании Sedona">
-          <img class="example-item" src="img/img-pink.jpg" alt="Макет сайта компании Pink">
-          <img class="example-item" src="img/img-barbershop.jpg" alt="Макет сайта Барбершопа Бородинский">
-          <img class="example-item" src="img/img-mishka.jpg" alt="Макет сайта магазина вязаных игрушек Mishka">
-          <img class="example-item" src="img/img-aplus.jpg" alt="Макет сайта курсов А+">
-          <img class="example-item" src="img/img-kvast.jpg" alt="Макет сайта производителя кваса Кваст">
-        </div>
-      </section>
     </div>
 
-    <ul class="button-list ls-none">
-      <li class="button-one"><a href="#" aria-label="Первая страница каталога">1</a></li>
-      <li class="button-two"><a href="#" aria-label="Вторая страница каталога">2</a></li>
-      <li class="button-three"><a href="#" aria-label="Третья страница каталога">3</a></li>
-      <li class="button-next text-option-usual"><a href="#" aria-label="Кнопка переключения на следующую страницу каталога">Следующая</a></li>
-    </ul>
+
 
     <section class="address">
       <section class="address-details">
