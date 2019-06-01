@@ -11,33 +11,57 @@
 
 <body>
   <header>
-    <nav class="main-menu">
-      <a href="#" class="nerds-logo">
-        <img src="img/svg-nerds/nerds-logo.svg" alt="Логотип студии Nerds">
-      </a>
-      <div class="navigation-wrapper">
-        <div class="navigation-container">
-          <ul class="site-navigation ls-none">
-            <li><a href="#" class="main-menu-list">Студия</a></li>
-            <li><a href="#" class="main-menu-list">Клиенты</a></li>
-            <li><a href="catalog.html" class="main-menu-list">Магазин</a></li>
-            <li><a href="#" class="main-menu-list main-menu-list-contacts">Контакты</a></li>
-          </ul>
+    <div class="content-size">
+      <nav class="main-menu">
+        <a href="#" class="nerds-logo">
+          <img src="img/svg-nerds/nerds-logo.svg" alt="Логотип студии Nerds">
+        </a>
+        <div class="navigation-wrapper">
+          <div class="navigation-container">
+            <ul class="site-navigation ls-none">
+              <li><a href="#" class="main-menu-list">Студия</a></li>
+              <li><a href="#" class="main-menu-list">Клиенты</a></li>
+              <li><a href="catalog.html" class="main-menu-list">Магазин</a></li>
+              <li><a href="#" class="main-menu-list main-menu-list-contacts">Контакты</a></li>
+            </ul>
 
-          <ul class="user-navigation ls-none">
-            <li><a href="#" class="main-menu-cart">Корзина</a></li>
-            <!-- изображения символа "корзинка" через background - svg -->
+            <ul class="user-navigation ls-none">
+              <li><a href="#" class="main-menu-cart">Корзина</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section class="header-slider content-size">
+        <div class="slider-container">
+          <div class="slider-controls">
+            <i class="active"></i>
+            <i></i>
+            <i></i>
+          </div>
+          <ul class="slider-list ls-none">
+            <li class="slider-item">
+              <h3>Долго, дорого,<br> скрупулезно.</h3>
+              <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
+              <a class="slider-item-button button-type" href="#">Узнать больше</a>
+            </li>
+            <li class="slider-item">
+              <h3>Любим математику как никто другой</h3>
+              <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+              <a class="slider-item-button button-type" href="#">Узнать больше</a>
+            </li>
+            <li class="slider-item">
+              <h3>Только ночь,<br> только хардкор</h3>
+              <p>Работать днем, как все? Мы против этого.<br> Ближе к полуночи работа только начинается.</p>
+              <a class="slider-item-button button-type" href="#">Узнать больше</a>
+            </li>
           </ul>
         </div>
-      </div>
-    </nav>
-    <div class="header-slider">
-      <!-- слайдер -->
+      </section>
     </div>
   </header>
 
   <main>
-    <section class="segments">
+    <section class="segments content-size">
       <ul class="segment-list ls-none">
 
         <li class="segment-list-item segment-item-wed">
@@ -59,7 +83,7 @@
         </li>
       </ul>
     </section>
-    <section class="about-us">
+    <section class="about-us content-size">
       <div class="about-us-container">
         <div class="left-col">
           <h1>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h1>
@@ -92,7 +116,7 @@
         </div>
       </div>
     </section>
-    <section class="clients">
+    <section class="clients content-size">
       <ul class="clients-list ls-none">
         <li>
           <a href="https://htmlacademy.ru" class="client-logo"><img src="img/logo-htmlacademy.png" alt="Логотип HTMLAcademy"
@@ -111,44 +135,51 @@
       </ul>
     </section>
     <section class="address text-option-usual">
-      <section class="address-details">
-        <h2>NЁRDS DESIGN STUDIO</h2>
-        <p>191186, Санкт-Петербург,<br>
-          ул. Б. Конюшенная, д. 19/8
-        </p>
-        <p class="address-tel">тел. +7 (812) 275-75-75</p>
-        <a class="write-us-button button-type" href="#" aria-label="Ссылка на форму связи">Напишите нам</a>
-      </section>
+      <div class="address-detail-wrapper content-size">
+        <section class="address-details">
+          <h2 class="address-details-header">NЁRDS DESIGN STUDIO</h2>
+          <p class="address-details-text">191186, Санкт-Петербург,<br>
+            ул. Б. Конюшенная, д. 19/8
+          </p>
+          <p class="address-tel">тел. +7 (812) 275-75-75</p>
+          <a class="write-us-button button-type" href="#" aria-label="Ссылка на форму связи">Напишите нам</a>
+        </section>
+      </div>
     </section>
 
-    <form method="post" action="https://echo.htmlacademy.ru" class="write-us-wrapper none">
-      <h1 class="write-us-header">Напишите нам</h1>
-      <button type="button" aria-label="Кнопка закрытия формы для связи" class="">X</button>
-      <!-- изображение кнопки "крестик" через background - svg -->
-      <form method="post" action="https://echo.htmlacademy.ru" class="write-us-wrapper none"></form>
-      <ul class="ls-none">
-        <li>
-          <label class="write-us-item">
-            Ваше имя
-            <input type="text" name="user-name" placeholder="Имя Фамилия">
-          </label>
-        </li>
+    <section class="write-us-block content-size">
+      <form method="post" action="https://echo.htmlacademy.ru" class="none">
+        <div class="write-us-wrapper">
+          <div class="write-us-container">
+            <h1 class="write-us-header">Напишите нам</h1>
+            <button type="button" aria-label="Кнопка закрытия формы для связи" class="write-us-close-button"></button>
+            <form method="post" action="https://echo.htmlacademy.ru" class="write-us-wrapper none"></form>
+            <ul class="write-us-list ls-none">
+              <li class="write-us-item-name">
+                <label class="write-us-item">
+                  Ваше имя<br>
+                  <input type="text" name="user-name" placeholder="Имя Фамилия">
+                </label>
+              </li>
 
-        <li>
-          <label class="write-us-item">
-            Ваш e-mail
-            <input type="text" name="user-email" placeholder="example@mail.com">
-          </label>
-        </li>
+              <li class="write-us-item-mail">
+                <label class="write-us-item">
+                  Ваш e-mail<br>
+                  <input type="text" name="user-email" placeholder="example@mail.com">
+                </label>
+              </li>
 
-        <li>
-          <label class="write-us-item text-option-usual">Текст письма
-            <textarea name="user-text" placeholder="В свободной форме"></textarea>
-          </label>
-        </li>
-      </ul>
-      <button type="submit" class="write-us-send text-option-usual button-type">Отправить</button>
-    </form>
+              <li class="write-us-text">
+                <label class="write-us-item text-option-usual">Текст письма
+                  <textarea name="user-text" placeholder="В свободной форме"></textarea>
+                </label>
+              </li>
+            </ul>
+            <button type="submit" class="write-us-send text-option-usual button-type">Отправить</button>
+          </div>
+        </div>
+      </form>
+    </section>
 
   </main>
 
