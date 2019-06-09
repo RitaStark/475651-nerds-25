@@ -138,7 +138,7 @@ a {
     padding: 78px 0 80px 0;
 }
 
-.slider-item:nth-child(1) {
+.slider-item:nth-child(3) {
     display:block;
 }
 
@@ -202,6 +202,24 @@ a {
     background: #ffffff;
     border-radius: 50%;
   }
+.slider-controls .active:before{
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+
+    width: 4px;
+    height: 4px;
+    margin: -4px;
+
+    background-color: inherit;
+    border: 2px solid #c1c1c1;
+    border-radius: 50%;
+  }
+
+
 
   .slider-controls {
     position: absolute;
@@ -238,9 +256,17 @@ a {
     display:none;
 } */
 
+.modal-block {
+    width:100%;
+    height: 100%;
+    background-color: transparent;
+}
+
 .write-us-block {
     width:960px;
     min-height: 590px;
+    display: none;
+    background-color: #ffffff;
 }
 
 .write-us-list {
@@ -250,8 +276,8 @@ a {
 }
 
 .write-us-item-name input[type="text"],
-.write-us-item-mail input[type="text"] {
-    width:347px;
+.write-us-item-mail input[type="email"] {
+    width:345px;
 }
 
 .write-us-item textarea {
@@ -264,6 +290,7 @@ a {
     border-radius: 5px;
     padding-left:14px;
     padding-top:13px;
+    resize: vertical;
 }
 
 .write-us-text {
@@ -275,7 +302,8 @@ a {
 }
 
 
-.write-us-item input[type="text"] {
+.write-us-item input[type="text"],
+.write-us-item input[type="email"] {
     font: inherit;
     font-weight: 400;
     opacity:0.5;
@@ -287,6 +315,7 @@ a {
 
 
 .write-us-item input[type="text"]:hover,
+.write-us-item input[type="email"]:hover,
 .write-us-item textarea:hover {
     font: inherit;
     font-weight: 400;
@@ -296,6 +325,7 @@ a {
 }
 
 .write-us-item input[type="text"]:active,
+.write-us-item input[type="email"]:active,
 .write-us-item textarea:active {
     font: inherit;
     font-weight: 400;
@@ -304,7 +334,8 @@ a {
     border-radius: 2px;
 }
 
-.write-us-item input[type="text"]:invalid,   /*в какой момент проверяется валидность? при вводе эффекта не увидела*/
+.write-us-item input[type="text"]:invalid,
+.write-us-item input[type="email"]:invalid,
 .write-us-item textarea:invalid {
     font: inherit;
     font-weight: 400;
@@ -341,7 +372,7 @@ a {
     display: flex;
     flex-direction: column;
 
-    border: 1px solid none;
+    border: 1px solid transparent;
     box-shadow:
         0px 10px 25px #888888,
         5px 10px 5px #888888,
@@ -354,7 +385,7 @@ a {
     position: relative;
 }
 
-.write-us-close-button {  /*почему-то у кнопки фон откуда-то*/
+.write-us-close-button {
     position: absolute;
     content:"";
     background-image: url("../img/svg-nerds/close-cross.svg");
@@ -367,6 +398,7 @@ a {
     padding:0;
     margin:0;
     border:none;
+    background-color: #ffffff;
 }
 
 .write-us-item-name label {
@@ -413,6 +445,7 @@ ul.segment-list{
 }
 
 .segment-list-item {
+    position: relative;
     max-width: 300px;
     padding-top:146px;
 }
@@ -425,15 +458,12 @@ ul.segment-list{
     background-color:#fb565a;
 }
 
-.segment-list {
-    position: relative;
-}
 
 .segment-item-wed::before {
     background-image:url(../img/illustration-1.jpg);
     background-repeat: no-repeat;
-    width: 300px;
-    height: 146px;;
+    width: 100%;
+    height: 146px;
     content:"";
     position: absolute;
     left:0;
@@ -448,11 +478,11 @@ ul.segment-list{
 .segment-item-app::before {
     background-image:url(../img/illustration-2.jpg);
     background-repeat: no-repeat;
-    width: 300px;
+    width: 100%;
     height: 146px;;
     content:"";
     position: absolute;
-    left:400px;
+    left:0;
     top:0;
 }
 
@@ -469,11 +499,11 @@ ul.segment-list{
 .segment-item-presentations::before {
     background-image:url(../img/illustration-3.jpg);
     background-repeat: no-repeat;
-    width: 300px;
+    width: 100%;
     height: 146px;;
     content:"";
     position: absolute;
-    left:800px;
+    left:0;
     top:0;
 }
 
@@ -526,20 +556,36 @@ ul.segment-list{
     color:#000000;
 }
 
-.left-col-text-list{
+.left-col-text-list {
+    padding-left: 0;
+}
+
+.left-col-text-list-item {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     color:#283136;
     margin-bottom:39px;
+    position: relative;
+    padding-left:36px;
 }
 
-.left-col-text-list:nth-child(1){
+.left-col-text-list-item:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width:25px;
+    background-color:#fb565a;
+    left:0;
+    top:10px;
+}
+
+.left-col-text-list-item:nth-child(1){
     margin-top:39px;
 }
 
 
-.right-col-list {  /* там где цифры в процентах последняя колонка какая-то растянутая из-за p внутри?*/
+.right-col-list {
     display: flex;
     padding-left: 0;
     justify-content: space-between;
@@ -579,7 +625,7 @@ ul.segment-list{
     color:red;
 }
 
-.client-logo:active { /*у лого академии цве пропадает почему-то при нажатии, с остальными все ок*/
+.client-logo:active {
     opacity:0.1;
 }
 
@@ -591,11 +637,12 @@ ul.segment-list{
     margin: 0 auto;
 }
 
-.address {   /*карта должна каким-то образом упираться в края?*/
+.address {
     background-image: url(../img/map-and-marker.jpg);
     background-repeat: no-repeat;
     min-height:416px;
     background-position: center;
+    margin-bottom: 77px;
 }
 
 .address-detail-wrapper {
@@ -614,7 +661,8 @@ ul.segment-list{
 
     position: absolute;
     content: "";
-    top:54px;
+    top:50%;
+    transform: translateY(-50%);
     left:0;
 }
 
@@ -776,16 +824,81 @@ fieldset {
 }
 
 
-.filter-item{
+.filter-item {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 25px;
     color:#797c7f;
+    padding-bottom:20px;
 }
 
 
 .filter-item:hover {
     color:#283136;
 }
+
+.filter-item input[type=radio],
+.filter-item input[type=checkbox] {
+    display: none;
+}
+
+.filter-item-radio {
+    position: relative;
+}
+
+.filter-item-radio:before {
+    position: absolute;
+    content:"";
+    height: 25px;
+    width:25px;
+    background-image: url("../img/svg-nerds/radio-off.svg");
+    background-repeat: no-repeat;
+    opacity: 0.4;
+}
+
+/*выбранная радио-кнопка*/
+/* 
+.filter-item-radio:checked::before {
+    position: absolute;
+    content:"";
+    height: 25px;
+    width:25px;
+    background-image: url("../img/svg-nerds/radio-on.svg");
+    background-repeat: no-repeat;
+    opacity: 0.4;
+} */
+
+
+.filter-item-radio label,
+.filter-item-checkbox label {
+    padding-left: 36px;
+}
+
+.filter-item-checkbox {
+    position: relative;
+}
+
+.filter-item-checkbox:before {
+    position: absolute;
+    content:"";
+    height: 25px;
+    width:25px;
+    background-image: url("../img/svg-nerds/checkbox-off.svg");
+    background-repeat: no-repeat;
+    opacity: 0.4;
+}
+
+
+/*выбранный чекбокс*/
+/* .filter-item-checkbox:before {
+    position: absolute;
+    content:"";
+    height: 25px;
+    width:25px;
+    background-image: url("../img/svg-nerds/checkbox-on.svg");
+    background-repeat: no-repeat;
+    opacity: 0.4;
+} */
+
 
 .inner-header {
     font-size: 55px;
@@ -917,6 +1030,7 @@ a.sort-type:active{
 
 .price-controls {
     font-size: 0;
+    margin-bottom:62px;
 }
 
 .range-controls .toggle-min {
@@ -957,3 +1071,27 @@ a.sort-type:active{
     display: flex;
     flex-direction: column;
 }
+
+/*script*/
+.modal-show {
+    display: block;
+    /* animation: bounce 0.6s; */
+}
+
+/* @keyframes bounce { */
+    /* 0% {
+      transform: translateY(-2000px);
+    }
+
+    70% {
+      transform: translateY(30px);
+    }
+
+    90% {
+      transform: translateY(-10px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  } */

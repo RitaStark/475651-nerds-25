@@ -90,10 +90,10 @@
           <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не
             покладая рук, как роботы.</p>
           <h3 class="left-col-list">Выполняем заказы на разработку:</h3>
-          <ul>
-            <li class="left-col-text-list">Веб-сайтов любой сложности</li>
-            <li class="left-col-text-list">Мобильных приложений для iOS и Android</li>
-            <li class="left-col-text-list">Слайдшоу и видео для корпоративных презентаций</li>
+          <ul class="left-col-text-list ls-none">
+            <li class="left-col-text-list-item">Веб-сайтов любой сложности</li>
+            <li class="left-col-text-list-item">Мобильных приложений для iOS и Android</li>
+            <li class="left-col-text-list-item">Слайдшоу и видео для корпоративных презентаций</li>
           </ul>
         </div>
         <div class="right-col">
@@ -119,8 +119,7 @@
     <section class="clients content-size">
       <ul class="clients-list ls-none">
         <li>
-          <a href="https://htmlacademy.ru" class="client-logo"><img src="img/logo-htmlacademy.png" alt="Логотип HTMLAcademy"
-              class="client-logo"></a>
+          <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.png" alt="Логотип HTMLAcademy" class="client-logo"></a>
         </li>
         <li>
           <a href="http://barbershop-borodinski.webflow.io/"><img src="img/logo-borodinski.png" alt="Логотип Барбершоп Бородинский"
@@ -147,7 +146,7 @@
       </div>
     </section>
 
-    <section class="write-us-block content-size">
+    <section class="write-us-block content-size modal-block">
       <form method="post" action="https://echo.htmlacademy.ru" class="none">
         <div class="write-us-wrapper">
           <div class="write-us-container">
@@ -165,7 +164,7 @@
               <li class="write-us-item-mail">
                 <label class="write-us-item">
                   Ваш e-mail<br>
-                  <input type="text" name="user-email" placeholder="example@mail.com">
+                  <input type="email" name="user-email" placeholder="example@mail.com">
                 </label>
               </li>
 
@@ -180,6 +179,7 @@
         </div>
       </form>
     </section>
+
 
   </main>
 
@@ -198,6 +198,64 @@
     </div>
   </footer>
 
+  <script>
+    var link = document.querySelector(".write-us-button");
+
+    var popup = document.querySelector(".write-us-block");
+    var close = popup.querySelector(".write-us-close-button");
+
+    var form = popup.querySelector("form");
+    var nameField = popup.querySelector("[name=user-name]");
+    var emailField = popup.querySelector("[name=user-email]");
+
+    var isStorageSupport = true;
+    var storage = "";
+
+    try {
+      storage = localStorage.getItem("nameField");
+    } catch (err) {
+      isStorageSupport = false;
+    }
+
+
+    link.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.add("modal-show");
+      if (storage) {
+        nameField.value = storage;
+        emailField.focus();
+      } else {
+        nameField.focus();
+      }
+    });
+
+
+    close.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.remove("modal-show");
+    });
+
+    form.addEventListener("submit", function (evt) {
+      if (!nameField.value || !emailField.value) {
+        evt.preventDefault();
+        console.log("Нужно ввести логин и почту");
+      }
+      else {
+        if (isStorageSupport) {
+          localStorage.setItem("nameField", nameField.value);
+        }
+      }
+    });
+    window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+        evt.preventDefault();
+        if (popup.classList.contains("modal-show")) {
+          popup.classList.remove("modal-show");
+        }
+      }
+    })
+
+  </script>
 
 </body>
 
