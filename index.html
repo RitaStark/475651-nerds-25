@@ -146,36 +146,36 @@
       </div>
     </section>
 
-    <section class="write-us-block content-size modal-block">
+    <section class="write-us-block content-size">
+      <div class="overlay"></div>
       <form method="post" action="https://echo.htmlacademy.ru" class="none">
         <div class="write-us-wrapper">
-          <div class="write-us-container">
-            <h1 class="write-us-header">Напишите нам</h1>
-            <button type="button" aria-label="Кнопка закрытия формы для связи" class="write-us-close-button"></button>
-            <form method="post" action="https://echo.htmlacademy.ru" class="write-us-wrapper none"></form>
-            <ul class="write-us-list ls-none">
-              <li class="write-us-item-name">
-                <label class="write-us-item">
-                  Ваше имя<br>
-                  <input type="text" name="user-name" placeholder="Имя Фамилия">
-                </label>
-              </li>
 
-              <li class="write-us-item-mail">
-                <label class="write-us-item">
-                  Ваш e-mail<br>
-                  <input type="email" name="user-email" placeholder="example@mail.com">
-                </label>
-              </li>
+          <h1 class="write-us-header">Напишите нам</h1>
+          <button type="button" aria-label="Кнопка закрытия формы для связи" class="write-us-close-button"></button>
+          <form method="post" action="https://echo.htmlacademy.ru" class="none"></form>
 
-              <li class="write-us-text">
-                <label class="write-us-item text-option-usual">Текст письма
-                  <textarea name="user-text" placeholder="В свободной форме"></textarea>
-                </label>
-              </li>
-            </ul>
-            <button type="submit" class="write-us-send text-option-usual button-type">Отправить</button>
+          <div class="write-us-list ls-none">
+
+            <div class="write-us-item write-us-item-name">
+              <label for="user-name-id">Ваше имя</label>
+              <input type="text" name="user-name" placeholder="Имя Фамилия" id="user-name-id">
+            </div>
+
+            <div class="write-us-item write-us-item-mail">
+              <label>Ваш e-mail</label>
+              <input type="email" name="user-email" placeholder="example@mail.com">
+            </div>
+
+            <div class="write-us-item write-us-text">
+              <label>Текст письма</label>
+              <textarea name="user-text" placeholder="В свободной форме"></textarea>
+            </div>
+
+
           </div>
+          <button type="submit" class="write-us-send text-option-usual button-type">Отправить</button>
+
         </div>
       </form>
     </section>

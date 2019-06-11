@@ -62,22 +62,16 @@
               <legend class="sort-name">Сетка:</legend>
               <ul class="sort-list ls-none">
                 <li class="filter-item  filter-item-radio">
-                  <label>
-                    <input type="radio" name="grid-type" value="адаптивная" checked class="filter-type">
-                    Адаптивная
-                  </label>
+                  <input type="radio" name="grid-type" value="адаптивная" checked class="filter-type" id="adaptive-type">
+                  <label for="adaptive-type">Адаптивная</label>
                 </li>
                 <li class="filter-item filter-item-radio">
-                  <label>
-                    <input type="radio" name="grid-type" value="фиксированная">
-                    Фиксированная
-                  </label>
+                  <input type="radio" name="grid-type" value="фиксированная" class="filter-type" id="fixed-type">
+                  <label for="fixed-type">Фиксированная</label>
                 </li>
                 <li class="filter-item filter-item-radio">
-                  <label>
-                    <input type="radio" name="grid-type" value="резиновая">
-                    Резиновая
-                  </label>
+                  <input type="radio" name="grid-type" value="резиновая" class="filter-type" id="rubber-type">
+                  <label for="rubber-type">Резиновая</label>
                 </li>
               </ul>
             </fieldset>
@@ -91,24 +85,26 @@
                   <label for="filter-slider">Слайдер</label>
                 </li>
                 <li class="filter-item filter-item-checkbox">
-                  <input type="checkbox" name="features" id="filter-advantage-block" value="advantage-block">
+                  <input type="checkbox" name="features" id="filter-advantage-block" value="advantage-block" class="filter-type-checkbox">
                   <label for="filter-advantage-block">Блок преимуществ</label>
                 </li>
                 <li class="filter-item filter-item-checkbox">
-                  <input type="checkbox" name="features" id="filter-news" value="news" checked>
+                  <input type="checkbox" name="features" id="filter-news" value="news" class="filter-type-checkbox"
+                    checked>
                   <label for="filter-news">Новости</label>
                 </li>
                 <li class="filter-item filter-item-checkbox">
-                  <input type="checkbox" name="features" value="gallery" id="filter-gallery">
+                  <input type="checkbox" name="features" value="gallery" id="filter-gallery" class="filter-type-checkbox">
                   <label for="filter-gallery">Галерея</label>
                 </li>
                 <li class="filter-item filter-item-checkbox">
-                  <input type="checkbox" name="features" value="basket" id="filter-basket">
+                  <input type="checkbox" name="features" value="basket" id="filter-basket" class="filter-type-checkbox">
                   <label for="filter-basket">Корзина</label>
                 </li>
               </ul>
             </fieldset>
             <button class="button button-filter-show text-option-usual" type="submit">Показать</button>
+          </div>
         </form>
       </section>
 
