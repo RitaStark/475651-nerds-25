@@ -21,6 +21,20 @@ a {
 
 /*общие стили*/
 
+.menu-active {
+    position: relative;
+}
+
+.menu-active::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+}
+
 .text-option-usual {
     font-size: 16px;
     line-height: 18px;
@@ -88,7 +102,7 @@ a {
     font-size: 16px;
     line-height: 30px;
     font-weight: bold;
-    padding-right: 48px;
+    margin-right: 48px;
     text-transform: uppercase;
 }
 
@@ -99,6 +113,7 @@ a {
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
+    padding-left: 41px;
 }
 
 .main-menu-cart:before {
@@ -168,15 +183,14 @@ a {
     border: none;
 }
 
-.slider-item-button:hover,
-.slider-item-button:focus {
+.slider-item-button:hover {
     background-color: #e74246;
 }
 
 .slider-item-button:active {
-    color: rgba(255, 255, 255, 0.3);
     background-color: #d7373b;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+    color: #e48789;
+    box-shadow: 0 3px #c13135 inset;
 }
 
 .slider-controls i {
@@ -270,6 +284,16 @@ a {
     z-index: 101;
 }
 
+.write-us-button:hover {
+    background-color: #e74246;
+}
+
+.write-us-button:active {
+    background-color: #d7373b;
+    color: #e48789;
+    box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+}
+
 .write-us-block form {
     position: absolute;
     top: 50%;
@@ -314,7 +338,7 @@ a {
 
 .write-us-text {
     width: 100%;
-    padding-top: 36px;
+    margin-top: 36px;
 }
 
 .write-us-text label {
@@ -343,14 +367,15 @@ a {
     border-radius: 5px;
 }
 
-.write-us-item input[type="text"]:active,
-.write-us-item input[type="email"]:active,
-.write-us-item textarea:active {
+.write-us-item input[type="text"]:focus,
+.write-us-item input[type="email"]:focus,
+.write-us-item textarea:focus {
     font: inherit;
     font-weight: 400;
     opacity: 0.5;
     border: 2px solid #000000;
     border-radius: 2px;
+    color: #444444;
 }
 
 .write-us-item input[type="text"]:invalid,
@@ -372,12 +397,22 @@ a {
     width: 260px;
 }
 
+.write-us-send:hover {
+    background-color: #e74246;
+}
+
+.write-us-send:active {
+    background-color: #d7373b;
+    color: #e48789;
+    box-shadow: 0 3px #c13135 inset;
+}
+
 .write-us-header {
     color: #000000;
     font-size: 45px;
     line-height: 45px;
     margin: 0;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .write-us-item {
@@ -405,13 +440,20 @@ a {
     opacity: 0.3;
     width: 21px;
     height: 21px;
-    ;
     right: 90px;
     top: 78px;
     padding: 0;
     margin: 0;
     border: none;
     background-color: #ffffff;
+}
+
+.write-us-close-button:hover {
+    opacity: 1;
+}
+
+.write-us-close-button:active {
+    opacity: 0.1;
 }
 
 ul.segment-list {
@@ -432,13 +474,6 @@ ul.segment-list {
     margin-right: 140px;
     display: block;
     text-align: center;
-}
-
-
-/*в состоянии наведения opacity у кнопок 100%. но цвет отличается от состояния покоя. воздействовать на изменение цвета не через прозрачность нужно?*/
-
-.segment-order:active {
-    opacity: 0.3;
 }
 
 .segment-list {
@@ -466,6 +501,16 @@ ul.segment-list {
     background-color: #fb565a;
 }
 
+.segment-item-wed .segment-order:hover {
+    background-color: #e74246;
+}
+
+.segment-item-wed .segment-order:active {
+    background-color: #d7373b;
+    color: #e48789;
+    box-shadow: 0 3px #c13135 inset;
+}
+
 .segment-item-wed::before {
     background-image: url(../img/illustration-1.jpg);
     background-repeat: no-repeat;
@@ -484,12 +529,21 @@ ul.segment-list {
     background-color: #00ca74;
 }
 
+.segment-item-app .segment-order:hover {
+    background-color: #00bc6c;
+}
+
+.segment-item-app .segment-order:active {
+    background-color: #00aa62;
+    color: #74c69c;
+    box-shadow: 0 3px #009958 inset;
+}
+
 .segment-item-app::before {
     background-image: url(../img/illustration-2.jpg);
     background-repeat: no-repeat;
     width: 100%;
     height: 146px;
-    ;
     content: "";
     position: absolute;
     left: 0;
@@ -499,13 +553,18 @@ ul.segment-list {
 
 /* презентации */
 
-.segments {
-    /*этот параметр нужен вообще?*/
-    min-width: 1100px;
-}
-
 .segment-item-presentations .segment-order {
     background-color: #efc84a;
+}
+
+.segment-item-presentations .segment-order:hover {
+    background-color: #eab534;
+}
+
+.segment-item-presentations .segment-order:active {
+    background-color: #e5a722;
+    color: #edc47f;
+    box-shadow: 0 3px #ce961f inset;
 }
 
 .segment-item-presentations::before {
@@ -513,7 +572,6 @@ ul.segment-list {
     background-repeat: no-repeat;
     width: 100%;
     height: 146px;
-    ;
     content: "";
     position: absolute;
     left: 0;
@@ -549,8 +607,8 @@ ul.segment-list {
 }
 
 .left-col {
-    width: 70%;
-    margin-right: 140px;
+    width: 80%;
+    margin-right: 130px;
 }
 
 .left-col-list {
@@ -609,6 +667,7 @@ ul.segment-list {
     font-size: 16px;
     line-height: 24px;
     font-weight: 700;
+    text-align: center;
 }
 
 .right-col-item-mark {
@@ -646,9 +705,32 @@ ul.segment-list {
 .clients-list {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-left: 0;
     width: 1100px;
     margin: 0 auto;
+}
+
+.client-htmlacademy,
+.client-barber,
+.client-pink {
+    position: relative;
+}
+
+
+/*а можно не писать все это правило ниже с перечислениями, а применить как-то правильно :not , чтобы просто исключить из списка последнего ребенка? у меня не получилось :(*/
+
+.client-htmlacademy::after,
+.client-barber::after,
+.client-pink::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 52px;
+    background-color: #eeeeee;
+    top: 50%;
+    left: 260px;
+    transform: translateY(-50%);
 }
 
 .address {
@@ -739,6 +821,15 @@ ul.segment-list {
     background-color: #e74246;
 }
 
+.social-img:active,
+.social-icon:active {
+    background-color: #d7373b;
+}
+
+.social-icon:active .social-img {
+    opacity: 0.3;
+}
+
 .social-list {
     display: flex;
     justify-content: space-between;
@@ -776,6 +867,31 @@ fieldset {
     border: none;
     border-radius: 5px;
     font-weight: bold;
+}
+
+.button-filter-show:hover {
+    background-color: #dfdfdf;
+}
+
+.button-filter-show:active {
+    color: #a9a9a9;
+    background-color: #d5d5d5;
+    box-shadow: 0 3px #bfbfbf inset;
+}
+
+.page-active {
+    color: #000000;
+    background-color: #ffffff;
+    padding: 16px 16px;
+    height: 38px;
+    width: 38px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 44px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 11px;
+    border: 3px solid #dbdbdb;
 }
 
 .button-one,
@@ -843,10 +959,6 @@ fieldset {
     margin-top: 0;
 }
 
-.sort-name-sort {
-    margin-bottom: 50px;
-}
-
 legend.filter-gap-cost {
     margin-bottom: 50px;
 }
@@ -870,8 +982,8 @@ legend.filter-gap-cost {
 
 /*радио кнопки*/
 
-.filter-item-radio,
-.filter-item-checkbox {
+.filter-item-radio label,
+.filter-item-checkbox label {
     padding-left: 36px;
 }
 
@@ -901,6 +1013,14 @@ legend.filter-gap-cost {
     opacity: 0.4;
 }
 
+.filter-item-radio label:hover::before {
+    opacity: 1;
+}
+
+.filter-item-radio label:disabled::before {
+    opacity: 0.3;
+}
+
 
 /*чекбоксы*/
 
@@ -920,6 +1040,19 @@ legend.filter-gap-cost {
     opacity: 0.4;
 }
 
+
+/*почему в случае с радиокнопками мне нужно было отдельно выбирать выбранный пунк чтобы hover задать, а тут так не сработало*/
+
+.filter-item-checkbox label:hover::before,
+.filter-type-checkbox:checked+label:hover::before {
+    opacity: 1;
+}
+
+.filter-item-checkbox label:disabled::before,
+.filter-type-checkbox:checked+label:disabled::before {
+    opacity: 0.3;
+}
+
 .filter-type-checkbox:checked+label::before {
     content: "";
     position: absolute;
@@ -937,7 +1070,6 @@ legend.filter-gap-cost {
     background-color: #eeeeee;
     text-align: center;
     display: block;
-    vertical-align: middle;
     padding-top: 70px;
     margin: 0 auto;
 }
@@ -955,11 +1087,10 @@ legend.filter-gap-cost {
 .sort-type-list {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 358px;
     padding-left: 0;
-    /* padding-right: 35px; */
     margin-top: 0;
-    /*надо каким-то другим способом выравнивать и отодвигать*/
 }
 
 .sort-type:hover {
@@ -977,6 +1108,7 @@ legend.filter-gap-cost {
     border: none;
     padding: 0;
     line-height: 30px;
+    align-self: center;
 }
 
 .sort-button-down a {
@@ -1041,16 +1173,17 @@ legend.filter-gap-cost {
     margin-bottom: 60px;
 }
 
-.example-item {
-    margin-bottom: 60px;
-    border-top: 41px solid #e9e9e9;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    position: relative;
-}
-
 .example-item-block {
     position: relative;
+    margin-bottom: 33px;
+}
+
+.example-item {
+    border: 1px solid #e5e5e5;
+}
+
+.example-item-block.example-item-block-last {
+    margin-bottom: 60px;
 }
 
 .example-dot {
@@ -1059,31 +1192,29 @@ legend.filter-gap-cost {
     border-radius: 50%;
     margin-right: 9px;
     background: #ffffff;
-    z-index: 100;
 }
 
 .example-dot-wrap {
     display: flex;
-    position: absolute;
-    top: 12px;
-    ;
-    left: 15px;
+    height: 41px;
+    background-color: #e9e9e9;
+    align-items: center;
+    padding-left: 16px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
-.example-item:hover {
-    border-top: 41px solid #4d4d4d;
+.example-dot-wrap:hover {
+    background-color: #4d4d4d;
 }
-
-
-/*инфо а макете при наведении*/
 
 .example-item-description {
     /*с позиционирование временное решение*/
     /* display: none; */
     position: absolute;
-    top: 990px;
-    left: 960px;
-    width: 360px;
+    top: 387px;
+    left: 0px;
+    width: 362px;
     text-align: center;
     background-color: #eeeeee;
     padding-right: 80px;
@@ -1100,6 +1231,7 @@ legend.filter-gap-cost {
     font-weight: bold;
     font-size: 18px;
     line-height: 30px;
+    margin-top: 23px;
 }
 
 .descript-text {
@@ -1113,7 +1245,7 @@ legend.filter-gap-cost {
     background-color: #fb565a;
     padding: 19px 55px;
     border-radius: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 42px;
 }
 
 .descript-button:hover {
@@ -1122,6 +1254,7 @@ legend.filter-gap-cost {
 
 .descript-button:active {
     background-color: #d7373b;
+    box-shadow: 0 3px #c13135 inset;
 }
 
 .filter-gap {
@@ -1211,6 +1344,10 @@ legend.filter-gap-cost {
     margin: auto auto 58px auto;
 }
 
+.sort {
+    margin-bottom: 31px;
+}
+
 .sort-type {
     display: flex;
     padding-left: 0;
@@ -1255,3 +1392,5 @@ legend.filter-gap-cost {
       transform: translateY(0);
     }
   } */
+
+s
