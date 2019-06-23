@@ -34,22 +34,22 @@
             <section class="header-slider content-size">
                 <div class="slider-container">
                     <div class="slider-controls">
-                        <i class="active"></i>
-                        <i></i>
-                        <i></i>
+                        <i class="slider-radio-one active"></i>
+                        <i class="slider-radio-two"></i>
+                        <i class="slider-radio-three"></i>
                     </div>
                     <ul class="slider-list ls-none">
-                        <li class="slider-item">
+                        <li class="slider-item slider-item-one">
                             <h3>Долго, дорого,<br> скрупулезно.</h3>
                             <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
                             <a class="slider-item-button button-type" href="#">Узнать больше</a>
                         </li>
-                        <li class="slider-item">
+                        <li class="slider-item slider-item-two">
                             <h3>Любим математику как никто другой</h3>
                             <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
                             <a class="slider-item-button button-type" href="#">Узнать больше</a>
                         </li>
-                        <li class="slider-item">
+                        <li class="slider-item slider-item-three">
                             <h3>Только ночь,<br> только хардкор</h3>
                             <p>Работать днем, как все? Мы против этого.<br> Ближе к полуночи работа только начинается.</p>
                             <a class="slider-item-button button-type" href="#">Узнать больше</a>
@@ -69,18 +69,17 @@
                     <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
                     <a href="http://nerds.armstud.ru/catalog.html" class="button-type segment-order">Заказать</a>
                 </li>
-
                 <li class="segment-list-item segment-item-app">
                     <h3 class="segment-item-head">Приложения</h3>
                     <p>Покорите топ-10 приложений в AppStore и Google Play</p>
                     <a href="http://nerds.armstud.ru/catalog.html" class=" button-type segment-order">Заказать</a>
                 </li>
-
                 <li class="segment-list-item segment-item-presentations">
                     <h3 class="segment-item-head">Презентации</h3>
                     <p>Вы даже не подозреваете, насколько вы изумительны!</p>
                     <a href="http://nerds.armstud.ru/catalog.html" class="button-type segment-order">Заказать</a>
                 </li>
+
             </ul>
         </section>
         <section class="about-us content-size">
@@ -206,6 +205,10 @@
         var nameField = popup.querySelector("[name=user-name]");
         var emailField = popup.querySelector("[name=user-email]");
 
+        // var sliderTwo = document.querySelector(".slider-radio-two");
+
+        var overlay = popup.querySelector(".overlay");
+
         var isStorageSupport = true;
         var storage = "";
 
@@ -231,6 +234,15 @@
         close.addEventListener("click", function(evt) {
             popup.classList.remove("modal-show");
         });
+
+        overlay.addEventListener("click", function(evt) {
+            popup.classList.remove("modal-show");
+        });
+
+        // sliderTwo.addEventListener("click", function(evt) {
+        //     document.classList.add("slider-item:nth-child(2)");
+
+        // });
 
         form.addEventListener("submit", function(evt) {
             if (!nameField.value || !emailField.value) {

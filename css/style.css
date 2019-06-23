@@ -152,7 +152,7 @@ a {
     padding: 78px 0 80px 0;
 }
 
-.slider-item:nth-child(3) {
+.slider-item:nth-child(1) {
     display: block;
 }
 
@@ -446,6 +446,7 @@ a {
     margin: 0;
     border: none;
     background-color: #ffffff;
+    cursor: pointer;
 }
 
 .write-us-close-button:hover {
@@ -482,6 +483,8 @@ ul.segment-list {
     justify-content: space-between;
     width: 1100px;
     margin-left: 140px;
+    flex-wrap: wrap;
+    overflow: auto;
 }
 
 ul.segment-list {
@@ -492,6 +495,7 @@ ul.segment-list {
     position: relative;
     max-width: 300px;
     padding-top: 146px;
+    margin-bottom: 20px;
 }
 
 
@@ -706,6 +710,7 @@ ul.segment-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding-left: 0;
     width: 1100px;
     margin: 0 auto;
@@ -867,6 +872,7 @@ fieldset {
     border: none;
     border-radius: 5px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .button-filter-show:hover {
@@ -985,6 +991,7 @@ legend.filter-gap-cost {
 .filter-item-radio label,
 .filter-item-checkbox label {
     padding-left: 36px;
+    cursor: pointer;
 }
 
 .filter-item-radio {
@@ -1084,6 +1091,10 @@ legend.filter-gap-cost {
     padding-right: 20px;
 }
 
+.sort-type-active {
+    color: #000000;
+}
+
 .sort-type-list {
     display: flex;
     justify-content: space-between;
@@ -1120,7 +1131,10 @@ legend.filter-gap-cost {
     left: 0;
     background-image: url("../img/svg-nerds/icon-down-dir.svg");
     background-repeat: no-repeat;
-    opacity: 0.3;
+}
+
+.sort-button-active {
+    opacity: 1;
 }
 
 .sort-button-up a {
@@ -1204,7 +1218,7 @@ legend.filter-gap-cost {
     border-top-right-radius: 5px;
 }
 
-.example-dot-wrap:hover {
+.example-item-block:hover .example-dot-wrap {
     background-color: #4d4d4d;
 }
 
@@ -1371,26 +1385,3 @@ legend.filter-gap-cost {
     display: block;
     /* animation: bounce 0.6s; */
 }
-
-
-/* @keyframes bounce { */
-
-
-/* 0% {
-      transform: translateY(-2000px);
-    }
-
-    70% {
-      transform: translateY(30px);
-    }
-
-    90% {
-      transform: translateY(-10px);
-    }
-
-    100% {
-      transform: translateY(0);
-    }
-  } */
-
-s
