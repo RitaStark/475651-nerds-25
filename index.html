@@ -32,12 +32,16 @@
                 </div>
             </nav>
             <section class="header-slider content-size">
-                <div class="slider-container">
+                <div class="slider-container" tabindex="1">
+                    <input type="radio" id="slider-1" name="toggle" class="visually-hidden" checked>
+                    <input type="radio" id="slider-2" name="toggle" class="visually-hidden">
+                    <input type="radio" id="slider-3" name="toggle" class="visually-hidden">
                     <div class="slider-controls">
-                        <i class="slider-radio-one active"></i>
-                        <i class="slider-radio-two"></i>
-                        <i class="slider-radio-three"></i>
+                        <label for="slider-1" class="slider-item-1">Первый</label>
+                        <label for="slider-2" class="slider-item-2">Второй</label>
+                        <label for="slider-3" class="slider-item-3">Третий</label>
                     </div>
+
                     <ul class="slider-list ls-none">
                         <li class="slider-item slider-item-one">
                             <h3>Долго, дорого,<br> скрупулезно.</h3>
@@ -205,8 +209,6 @@
         var nameField = popup.querySelector("[name=user-name]");
         var emailField = popup.querySelector("[name=user-email]");
 
-        // var sliderTwo = document.querySelector(".slider-radio-two");
-
         var overlay = popup.querySelector(".overlay");
 
         var isStorageSupport = true;
@@ -238,11 +240,6 @@
         overlay.addEventListener("click", function(evt) {
             popup.classList.remove("modal-show");
         });
-
-        // sliderTwo.addEventListener("click", function(evt) {
-        //     document.classList.add("slider-item:nth-child(2)");
-
-        // });
 
         form.addEventListener("submit", function(evt) {
             if (!nameField.value || !emailField.value) {

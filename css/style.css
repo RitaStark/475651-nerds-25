@@ -140,6 +140,17 @@ a {
     background-color: #eeeeee;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+}
+
+.slider {
+    position: relative;
+}
+
 .slider-container {
     position: relative;
     background-color: #eeeeee;
@@ -150,10 +161,6 @@ a {
 .slider-item {
     display: none;
     padding: 78px 0 80px 0;
-}
-
-.slider-item:nth-child(1) {
-    display: block;
 }
 
 .slider-list {
@@ -193,7 +200,7 @@ a {
     box-shadow: 0 3px #c13135 inset;
 }
 
-.slider-controls i {
+.slider-controls {
     display: inline-block;
     width: 18px;
     height: 18px;
@@ -203,7 +210,17 @@ a {
     padding: 8px;
 }
 
-.slider-controls i::after {
+.slider-controls label {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-controls label::after {
     content: "";
     position: absolute;
     top: 8px;
@@ -241,6 +258,10 @@ a {
     transform: translateX(-50%);
 }
 
+.slider-item:nth-child(3) {
+    display: none;
+}
+
 .slider-item:nth-child(1) {
     background-image: url("../img/nerds-index-slide1.png");
     background-repeat: no-repeat;
@@ -257,6 +278,34 @@ a {
     background-image: url("../img/nerds-index-slide3.png");
     background-repeat: no-repeat;
     background-position: 100% 0;
+}
+
+#slider-1:checked~.slider-list .slider-item-one {
+    display: block;
+}
+
+#slider-2:checked~.slider-list .slider-item-two {
+    display: block;
+}
+
+#slider-3:checked~.slider-list .slider-item-three {
+    display: block;
+}
+
+#slider-1:checked~.slider-controls .slider-item-1::before,
+#slider-2:checked~.slider-controls .slider-item-2::before,
+#slider-3:checked~.slider-controls .slider-item-3::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    width: 4px;
+    height: 4px;
+    margin: -4px;
+    background-color: inherit;
+    border: 2px solid #c1c1c1;
+    border-radius: 50%;
 }
 
 
@@ -914,6 +963,7 @@ fieldset {
     border-radius: 5px;
     font-weight: bold;
     margin-right: 11px;
+    cursor: pointer;
 }
 
 .button-next {
@@ -927,6 +977,7 @@ fieldset {
     text-align: center;
     height: 44px;
     line-height: 44px;
+    cursor: pointer;
 }
 
 
@@ -1383,5 +1434,4 @@ legend.filter-gap-cost {
 
 .modal-show {
     display: block;
-    /* animation: bounce 0.6s; */
 }
