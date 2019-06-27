@@ -79,7 +79,8 @@ a {
     min-height: 65px;
     display: flex;
     align-items: center;
-    margin-top: 45px;
+    padding-top: 45px;
+    padding-bottom: 15px;
     margin-left: 140px;
     width: 1160px;
 }
@@ -187,14 +188,14 @@ a {
 .slider-item p {
     max-width: 430px;
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
     line-height: 23px;
 }
 
 .slider-item-button {
     background-color: #fb565a;
     padding: 15px 55px;
-    border-radius: 5px;
+    border-radius: 3px;
     border: none;
 }
 
@@ -273,7 +274,7 @@ a {
 .slider-item:nth-child(1) {
     background-image: url("../img/nerds-index-slide1.png");
     background-repeat: no-repeat;
-    background-position: 100% -15px;
+    background-position: 98% -15px;
 }
 
 .slider-item:nth-child(2) {
@@ -549,6 +550,10 @@ ul.segment-list {
     margin-bottom: 80px;
     flex-wrap: wrap;
     overflow: auto;
+}
+
+.segment-list p {
+    line-height: 25px;
 }
 
 ul.segment-list {
