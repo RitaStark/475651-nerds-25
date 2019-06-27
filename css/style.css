@@ -65,29 +65,36 @@ a {
     opacity: 0.3;
 }
 
-.main-menu-list:hover {
+.main-menu-list:hover,
+.main-menu-cart:hover {
     color: #fb565a;
 }
 
-.main-menu-list:active {
+.main-menu-list:active,
+.main-menu-cart:active {
     color: #c4c4c4;
 }
 
 .main-menu {
     min-height: 65px;
     display: flex;
-    padding-top: 49px;
+    align-items: center;
+    margin-top: 45px;
+    margin-left: 140px;
     width: 1160px;
 }
 
 .site-navigation {
     display: flex;
+    align-items: center;
+    align-content: center;
     flex-wrap: wrap;
     padding: 0;
 }
 
 .navigation-container {
     display: flex;
+    align-items: center;
     width: 800px;
     justify-content: space-between;
 }
@@ -119,7 +126,7 @@ a {
 .main-menu-cart:before {
     content: "";
     position: absolute;
-    right: 90px;
+    right: 98px;
     top: 5px;
     background-image: url("../img/cart-icon.png");
     background-repeat: no-repeat;
@@ -160,7 +167,7 @@ a {
 
 .slider-item {
     display: none;
-    padding: 78px 0 80px 0;
+    padding: 59px 0 80px 0;
 }
 
 .slider-list {
@@ -171,7 +178,7 @@ a {
 .slider-item h3 {
     font-size: 55px;
     line-height: 55px;
-    font-weight: 500;
+    font-weight: bold;
     max-width: 600px;
     margin: 0;
     margin-bottom: 27px;
@@ -180,12 +187,13 @@ a {
 .slider-item p {
     max-width: 430px;
     margin: 0;
-    margin-bottom: 38px;
+    margin-bottom: 60px;
+    line-height: 23px;
 }
 
 .slider-item-button {
     background-color: #fb565a;
-    padding: 13px 45px;
+    padding: 15px 55px;
     border-radius: 5px;
     border: none;
 }
@@ -265,7 +273,7 @@ a {
 .slider-item:nth-child(1) {
     background-image: url("../img/nerds-index-slide1.png");
     background-repeat: no-repeat;
-    background-position: 93% 18px;
+    background-position: 100% -15px;
 }
 
 .slider-item:nth-child(2) {
@@ -404,6 +412,13 @@ a {
     min-height: 50px;
     padding-left: 14px;
     padding-right: 14px;
+    color: #b1b1b1;
+}
+
+.write-us-item input[type="email"]:focus::placeholder,
+.write-us-item input[type="text"]:focus::placeholder,
+.write-us-item textarea:focus::placeholder {
+    color: #444444;
 }
 
 .write-us-item input[type="text"]:hover,
@@ -424,7 +439,7 @@ a {
     opacity: 0.5;
     border: 2px solid #000000;
     border-radius: 2px;
-    color: #444444;
+    outline: none;
 }
 
 .write-us-item input[type="text"]:invalid,
@@ -528,10 +543,10 @@ ul.segment-list {
 
 .segment-list {
     display: flex;
-    min-height: 507px;
     justify-content: space-between;
     width: 1100px;
     margin-left: 140px;
+    margin-bottom: 80px;
     flex-wrap: wrap;
     overflow: auto;
 }
@@ -544,7 +559,6 @@ ul.segment-list {
     position: relative;
     max-width: 300px;
     padding-top: 146px;
-    margin-bottom: 20px;
 }
 
 
@@ -631,10 +645,6 @@ ul.segment-list {
     top: 0;
 }
 
-.main-menu {
-    margin-left: 140px;
-}
-
 .clients,
 .main-menu,
 .footer-container,
@@ -651,6 +661,8 @@ ul.segment-list {
     justify-content: space-between;
     margin: 0 auto auto 140px;
     width: 1160px;
+    padding-top: 84px;
+    border-top: 2px solid #eeeeee;
 }
 
 .about-us h1 {
@@ -1241,6 +1253,7 @@ legend.filter-gap-cost {
 .example-item-block {
     position: relative;
     margin-bottom: 33px;
+    overflow: hidden;
 }
 
 .example-item {
@@ -1271,24 +1284,25 @@ legend.filter-gap-cost {
 
 .example-item-block:hover .example-dot-wrap {
     background-color: #4d4d4d;
+    transition: 0.3s;
 }
 
 .example-item-description {
-    /*с позиционирование временное решение*/
     /* display: none; */
     position: absolute;
-    top: 387px;
+    bottom: 0;
     left: 0px;
     width: 362px;
     text-align: center;
     background-color: #eeeeee;
-    padding-right: 80px;
-    padding-left: 80px;
+    padding-top: 35px;
     box-sizing: border-box;
+    transform: translateY(100%);
 }
 
-.example-item-description:hover {
-    display: block;
+.example-item-block:hover .example-item-description {
+    transform: translateY(0%);
+    transition: 0.3s;
 }
 
 .descript-header {
@@ -1299,8 +1313,18 @@ legend.filter-gap-cost {
     margin-top: 23px;
 }
 
+.descript-header:hover {
+    color: #fb565a;
+}
+
+.descript-header:active {
+    color: #cacaca;
+}
+
 .descript-text {
     padding-bottom: 30px;
+    padding-right: 60px;
+    padding-left: 60px;
     color: #666666;
     margin: 0;
 }
@@ -1311,6 +1335,8 @@ legend.filter-gap-cost {
     padding: 19px 55px;
     border-radius: 5px;
     margin-bottom: 42px;
+    margin-right: 80px;
+    margin-left: 80px;
 }
 
 .descript-button:hover {

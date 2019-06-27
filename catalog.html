@@ -133,7 +133,7 @@
                             </div>
                             <img class="example-item item-sedona" src="img/img-sedona.jpg" alt="Макет сайта туристичской компании Sedona">
                             <div class="example-item-description">
-                                <h2 class="descript-header">Sedona</h2>
+                                <a href="#" class="descript-header">Sedona</a>
                                 <p class="descript-text text-option-usual">Информацонный сайт для туристов</p>
                                 <a href="#" class="button-type descript-button" aria-label="Кнопка заказа с указанием стоимости">9 900 руб.</a>
                             </div>
@@ -145,6 +145,11 @@
                                 <div class="example-dot"></div>
                             </div>
                             <img class="example-item" src="img/img-pink.jpg" alt="Макет сайта компании Pink">
+                            <div class="example-item-description">
+                                <a href="#" class="descript-header">Pink app</a>
+                                <p class="descript-text text-option-usual">Продуктовый лендинг приложения для iOS и Android</p>
+                                <a href="#" class="button-type descript-button" aria-label="Кнопка заказа с указанием стоимости">9 900 руб.</a>
+                            </div>
                         </div>
                         <div class="example-item-block">
                             <div class="example-dot-wrap">
@@ -265,8 +270,6 @@
         var popup = document.querySelector(".write-us-block");
         var close = popup.querySelector(".write-us-close-button");
 
-        // var descriptItem = document.querySelector(".example-item-description");
-
         var form = popup.querySelector("form");
         var nameField = popup.querySelector("[name=user-name]");
         var emailField = popup.querySelector("[name=user-email]");
@@ -279,10 +282,6 @@
         } catch (err) {
             isStorageSupport = false;
         }
-
-        // descriptItem.addEventListener("click", function(evt) {
-        //             console.log('клик');
-
 
         link.addEventListener("click", function(evt) {
             evt.preventDefault();
