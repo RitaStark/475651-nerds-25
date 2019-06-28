@@ -28,7 +28,7 @@ a {
 .menu-active::after {
     content: "";
     position: absolute;
-    top: 30px;
+    top: 41px;
     left: 0;
     width: 100%;
     height: 2px;
@@ -55,6 +55,7 @@ a {
 
 .nerds-logo {
     margin-right: 200px;
+    margin-top: 5px;
 }
 
 .nerds-logo:hover {
@@ -105,30 +106,30 @@ a {
     display: block;
 }
 
-.main-menu-list {
-    min-height: 69px;
+.main-menu-list,
+.main-menu-cart {
     font-size: 16px;
-    line-height: 30px;
+    line-height: 16px;
     font-weight: bold;
-    margin-right: 48px;
     text-transform: uppercase;
+    padding-top: 15px;
+}
+
+.main-menu-list {
+    margin-right: 47px;
 }
 
 .main-menu-cart {
-    min-height: 69px;
-    font-size: 16px;
-    line-height: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
     position: relative;
     padding-left: 41px;
+    margin-left: 48px;
 }
 
 .main-menu-cart:before {
     content: "";
     position: absolute;
     right: 98px;
-    top: 5px;
+    top: 15px;
     background-image: url("../img/cart-icon.png");
     background-repeat: no-repeat;
     opacity: 0.3;
@@ -164,6 +165,7 @@ a {
     background-color: #eeeeee;
     width: 1160px;
     margin: 0 auto;
+    min-height: 412px;
 }
 
 .slider-item {
@@ -188,14 +190,14 @@ a {
 .slider-item p {
     max-width: 430px;
     margin: 0;
-    margin-bottom: 55px;
+    margin-bottom: 57px;
     line-height: 23px;
 }
 
 .slider-item-button {
     background-color: #fb565a;
     padding: 15px 55px;
-    border-radius: 3px;
+    border-radius: 1px;
     border: none;
 }
 
@@ -274,7 +276,7 @@ a {
 .slider-item:nth-child(1) {
     background-image: url("../img/nerds-index-slide1.png");
     background-repeat: no-repeat;
-    background-position: 98% -15px;
+    background-position: 99% -20px;
 }
 
 .slider-item:nth-child(2) {
@@ -534,9 +536,9 @@ ul.segment-list {
 }
 
 .segment-order {
-    padding: 19px 20px;
+    padding: 16px 20px;
     border-radius: 5px;
-    margin-top: 38px;
+    margin-top: 21px;
     margin-right: 140px;
     display: block;
     text-align: center;
@@ -553,7 +555,7 @@ ul.segment-list {
 }
 
 .segment-list p {
-    line-height: 25px;
+    margin-bottom: 37px;
 }
 
 ul.segment-list {
@@ -666,7 +668,7 @@ ul.segment-list {
     justify-content: space-between;
     margin: 0 auto auto 140px;
     width: 1160px;
-    padding-top: 84px;
+    padding-top: 43px;
     border-top: 2px solid #eeeeee;
 }
 
@@ -687,7 +689,8 @@ ul.segment-list {
 
 .left-col p {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 27px;
+    margin-bottom: 37px;
 }
 
 .left-col h3 {
@@ -699,15 +702,15 @@ ul.segment-list {
 }
 
 .left-col-text-list {
-    padding-left: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .left-col-text-list-item {
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
     color: #283136;
-    margin-bottom: 39px;
+    margin-bottom: 30px;
     position: relative;
     padding-left: 36px;
 }
@@ -718,12 +721,12 @@ ul.segment-list {
     height: 2px;
     width: 25px;
     background-color: #fb565a;
-    left: 0;
-    top: 10px;
+    left: 1px;
+    top: 7px;
 }
 
 .left-col-text-list-item:nth-child(1) {
-    margin-top: 39px;
+    margin-top: 27px;
 }
 
 .right-col-list {
@@ -810,6 +813,8 @@ ul.segment-list {
     min-height: 416px;
     background-position: center;
     margin-bottom: 77px;
+    width: 1440px;
+    position: relative;
 }
 
 .address-detail-wrapper {
@@ -854,6 +859,13 @@ ul.segment-list {
     color: #ffffff;
     padding: 19px 50px;
     border-radius: 5px;
+}
+
+.address iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
 }
 
 .motto {
@@ -933,10 +945,11 @@ fieldset {
 .button-filter-show {
     color: #000000;
     background-color: #eeeeee;
-    padding: 19px 89px;
+    padding: 16px 89px;
+    margin-top: 8px;
     text-transform: uppercase;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -954,13 +967,13 @@ fieldset {
 .page-active {
     color: #000000;
     background-color: #ffffff;
-    padding: 16px 16px;
+    padding: 3px 3px;
     height: 38px;
     width: 38px;
     text-align: center;
     vertical-align: middle;
     line-height: 44px;
-    border-radius: 5px;
+    border-radius: 3px;
     font-weight: bold;
     margin-right: 11px;
     border: 3px solid #dbdbdb;
@@ -971,13 +984,13 @@ fieldset {
 .button-three {
     color: #000000;
     background-color: #eeeeee;
-    padding: 16px 16px;
+    padding: 3px 3px;
     height: 44px;
     width: 44px;
     text-align: center;
     vertical-align: middle;
     line-height: 44px;
-    border-radius: 5px;
+    border-radius: 3px;
     font-weight: bold;
     margin-right: 11px;
     cursor: pointer;
@@ -987,9 +1000,9 @@ fieldset {
     text-transform: uppercase;
     color: #000000;
     background-color: #eeeeee;
-    padding: 16px 79px;
+    padding: 3px 0px;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 3px;
     width: 260px;
     text-align: center;
     height: 44px;
@@ -1027,7 +1040,7 @@ fieldset {
 .sort-name {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 19px;
+    font-size: 18px;
     line-height: 30px;
     color: #000000;
     margin-top: 0;
@@ -1038,10 +1051,8 @@ legend.filter-gap-cost {
 }
 
 .filter-item {
-    font-size: 16px;
-    line-height: 25px;
     color: #797c7f;
-    padding-bottom: 20px;
+    padding-bottom: 23px;
 }
 
 .filter-item:hover {
@@ -1072,7 +1083,7 @@ legend.filter-gap-cost {
     height: 25px;
     width: 25px;
     left: 0;
-    top: 0;
+    top: -2px;
     background-image: url("../img/svg-nerds/radio-off.svg");
     background-repeat: no-repeat;
     opacity: 0.4;
@@ -1101,6 +1112,7 @@ legend.filter-gap-cost {
 
 .filter-item-checkbox {
     position: relative;
+    padding-bottom: 22px;
 }
 
 .filter-item-checkbox label::before {
@@ -1140,12 +1152,12 @@ legend.filter-gap-cost {
 
 .inner-header {
     font-size: 55px;
-    line-height: 55px;
-    height: 230px;
+    min-height: 151px;
     background-color: #eeeeee;
     text-align: center;
     display: block;
-    padding-top: 70px;
+    padding-top: 54px;
+    padding-bottom: 16px;
     margin: 0 auto;
 }
 
@@ -1257,7 +1269,8 @@ legend.filter-gap-cost {
 
 .example-item-block {
     position: relative;
-    margin-bottom: 33px;
+    margin-bottom: 26px;
+    margin-left: -2px;
     overflow: hidden;
 }
 
@@ -1266,7 +1279,7 @@ legend.filter-gap-cost {
 }
 
 .example-item-block.example-item-block-last {
-    margin-bottom: 60px;
+    margin-bottom: 54px;
 }
 
 .example-dot {
@@ -1300,7 +1313,7 @@ legend.filter-gap-cost {
     width: 362px;
     text-align: center;
     background-color: #eeeeee;
-    padding-top: 35px;
+    padding-top: 29px;
     box-sizing: border-box;
     transform: translateY(100%);
 }
@@ -1314,8 +1327,8 @@ legend.filter-gap-cost {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 18px;
-    line-height: 30px;
-    margin-top: 23px;
+    line-height: 25px;
+    margin-left: -5px;
 }
 
 .descript-header:hover {
@@ -1328,18 +1341,19 @@ legend.filter-gap-cost {
 
 .descript-text {
     padding-bottom: 30px;
-    padding-right: 60px;
-    padding-left: 60px;
+    padding-right: 84px;
+    padding-left: 84px;
     color: #666666;
     margin: 0;
+    margin-top: 18px;
 }
 
 .descript-button {
     display: block;
     background-color: #fb565a;
-    padding: 19px 55px;
+    padding: 16px 55px;
     border-radius: 5px;
-    margin-bottom: 42px;
+    margin-bottom: 49px;
     margin-right: 80px;
     margin-left: 80px;
 }
@@ -1412,9 +1426,13 @@ legend.filter-gap-cost {
     text-align: right;
 }
 
+.max-price input {
+    margin-left: 8px;
+}
+
 .price-controls {
     font-size: 0;
-    margin-bottom: 62px;
+    margin-bottom: 57px;
 }
 
 .range-controls .toggle-min {
@@ -1437,7 +1455,7 @@ legend.filter-gap-cost {
 }
 
 .inner-page header {
-    margin: auto auto 58px auto;
+    margin: auto auto 53px auto;
 }
 
 .sort {
@@ -1453,6 +1471,7 @@ legend.filter-gap-cost {
 .sort-list {
     padding-left: 0;
     margin-left: 0;
+    margin-bottom: 22px;
 }
 
 .catalog-right-col {
