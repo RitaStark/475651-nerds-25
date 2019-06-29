@@ -275,6 +275,8 @@
         var nameField = popup.querySelector("[name=user-name]");
         var emailField = popup.querySelector("[name=user-email]");
 
+        var overlay = popup.querySelector(".overlay ");
+
         var isStorageSupport = true;
         var storage = "";
 
@@ -298,6 +300,10 @@
 
         close.addEventListener("click", function(evt) {
             popup.classList.remove("modal-show");
+        });
+
+        overlay.addEventListener("click ", function(evt) {
+            popup.classList.remove("modal-show ");
         });
 
         form.addEventListener("submit", function(evt) {
