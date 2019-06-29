@@ -171,6 +171,8 @@ a {
 .slider-item {
     display: none;
     padding: 59px 0 80px 0;
+    min-height: 412px;
+    box-sizing: border-box;
 }
 
 .slider-list {
@@ -190,14 +192,14 @@ a {
 .slider-item p {
     max-width: 430px;
     margin: 0;
-    margin-bottom: 57px;
+    margin-bottom: 55px;
     line-height: 23px;
 }
 
 .slider-item-button {
     background-color: #fb565a;
-    padding: 15px 55px;
-    border-radius: 1px;
+    padding: 15px 54px;
+    border-radius: 3px;
     border: none;
 }
 
@@ -213,12 +215,18 @@ a {
 
 .slider-controls {
     display: inline-block;
-    width: 18px;
-    height: 18px;
-    position: relative;
     border-radius: 50%;
     cursor: pointer;
     padding: 8px;
+    position: absolute;
+    left: 50%;
+    bottom: 97px;
+    z-index: 100;
+    width: 160px;
+    height: 18px;
+    text-align: center;
+    font-size: 0;
+    transform: translateX(-50%);
 }
 
 .slider-controls label {
@@ -255,18 +263,6 @@ a {
     background-color: inherit;
     border: 2px solid #c1c1c1;
     border-radius: 50%;
-}
-
-.slider-controls {
-    position: absolute;
-    left: 50%;
-    bottom: 104px;
-    z-index: 100;
-    width: 160px;
-    height: 18px;
-    text-align: center;
-    font-size: 0;
-    transform: translateX(-50%);
 }
 
 .slider-item:nth-child(3) {
@@ -344,6 +340,11 @@ a {
     z-index: 101;
 }
 
+a.write-us-button {
+    padding: 15px 44px;
+    border-radius: 3px;
+}
+
 .write-us-button:hover {
     background-color: #e74246;
 }
@@ -387,7 +388,7 @@ a {
     font-weight: 400;
     opacity: 0.5;
     border: 2px solid #d7dcde;
-    border-radius: 5px;
+    border-radius: 3px;
     padding-left: 14px;
     padding-right: 14px;
     padding-top: 13px;
@@ -411,7 +412,7 @@ a {
     font-weight: 400;
     opacity: 0.5;
     border: 2px solid #d7dcde;
-    border-radius: 5px;
+    border-radius: 3px;
     min-height: 50px;
     padding-left: 14px;
     padding-right: 14px;
@@ -431,7 +432,7 @@ a {
     font-weight: 400;
     opacity: 0.5;
     border: 2px solid #b4b9bb;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .write-us-item input[type="text"]:focus,
@@ -441,7 +442,7 @@ a {
     font-weight: 400;
     opacity: 0.5;
     border: 2px solid #000000;
-    border-radius: 2px;
+    border-radius: 3px;
     outline: none;
 }
 
@@ -452,14 +453,14 @@ a {
     font-weight: 400;
     opacity: 0.5;
     border: 2px solid #e74246;
-    border-radius: 5px;
+    border-radius: 3px;
     color: #e74246;
 }
 
 .write-us-send {
     background-color: #fb565a;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 16px 82px;
     width: 260px;
 }
@@ -537,7 +538,7 @@ ul.segment-list {
 
 .segment-order {
     padding: 16px 20px;
-    border-radius: 5px;
+    border-radius: 3px;
     margin-top: 21px;
     margin-right: 140px;
     display: block;
@@ -555,7 +556,10 @@ ul.segment-list {
 }
 
 .segment-list p {
-    margin-bottom: 37px;
+    margin-bottom: 35px;
+    padding-right: 20px;
+    margin-top: -5px;
+    line-height: 21px;
 }
 
 ul.segment-list {
@@ -660,7 +664,7 @@ ul.segment-list {
 }
 
 .about-us {
-    margin-bottom: 76px;
+    margin-bottom: 44px;
 }
 
 .about-us-container {
@@ -729,10 +733,16 @@ ul.segment-list {
     margin-top: 27px;
 }
 
+.right-col img {
+    margin-top: -2px;
+    margin-left: 8px;
+}
+
 .right-col-list {
     display: flex;
     padding-left: 0;
     justify-content: space-between;
+    margin-top: 0;
 }
 
 .right-col-text {
@@ -741,13 +751,18 @@ ul.segment-list {
     line-height: 24px;
     font-weight: 700;
     text-align: center;
+    margin: 31px -3px 0 8px;
 }
 
 .right-col-item-mark {
     font-size: 45px;
-    line-height: 10px;
     font-weight: 700;
-    margin-right: 20px;
+    margin: 37px 16px 16px 4px;
+}
+
+.right-col-item-name {
+    margin-top: 0;
+    margin-left: 2px;
 }
 
 .super {
@@ -757,8 +772,8 @@ ul.segment-list {
 .clients {
     border-top: 2px solid #eeeeee;
     border-bottom: 2px solid #eeeeee;
-    padding-top: 37px;
-    padding-bottom: 37px;
+    padding-top: 51px;
+    padding-bottom: 35px;
     margin-bottom: 80px;
 }
 
@@ -777,7 +792,7 @@ ul.segment-list {
 
 .clients-list {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     flex-wrap: wrap;
     padding-left: 0;
@@ -791,19 +806,48 @@ ul.segment-list {
     position: relative;
 }
 
+.client-barber {
+    margin-left: 97px;
+    margin-right: 103px
+}
+
+.client-pink {
+    margin-right: 120px;
+}
+
 
 /*а можно не писать все это правило ниже с перечислениями, а применить как-то правильно :not , чтобы просто исключить из списка последнего ребенка? у меня не получилось :(*/
 
-.client-htmlacademy::after,
-.client-barber::after,
+.client-htmlacademy::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 52px;
+    background-color: #eeeeee;
+    top: 28px;
+    left: 249px;
+    transform: translateY(-50%);
+}
+
+.client-barber::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 52px;
+    background-color: #eeeeee;
+    top: 40px;
+    left: 253px;
+    transform: translateY(-50%);
+}
+
 .client-pink::after {
     content: "";
     position: absolute;
     width: 2px;
     height: 52px;
     background-color: #eeeeee;
-    top: 50%;
-    left: 260px;
+    top: 21px;
+    left: 241px;
     transform: translateY(-50%);
 }
 
@@ -812,9 +856,9 @@ ul.segment-list {
     background-repeat: no-repeat;
     min-height: 416px;
     background-position: center;
-    margin-bottom: 77px;
     width: 1440px;
     position: relative;
+    margin: 0 auto 53px auto;
 }
 
 .address-detail-wrapper {
@@ -828,7 +872,8 @@ ul.segment-list {
     text-align: left;
     width: 269px;
     min-height: 309px;
-    padding-left: 50px;
+    padding-left: 51px;
+    margin-left: -1px;
     position: absolute;
     content: "";
     top: 50%;
@@ -841,8 +886,14 @@ ul.segment-list {
     font-size: 18px;
     line-height: 30px;
     color: #000000;
-    padding-top: 45px;
+    padding-top: 49px;
     margin: 0;
+}
+
+.address-details-text {
+    margin-top: 23px;
+    margin-left: 2px;
+    margin-bottom: 18px;
 }
 
 .address p {
@@ -850,33 +901,33 @@ ul.segment-list {
 }
 
 .address-tel {
-    padding-bottom: 40px;
+    padding-bottom: 38px;
+    margin-left: 3px;
 }
 
 .address a {
     text-transform: uppercase;
     background-color: #fb565a;
     color: #ffffff;
-    padding: 19px 50px;
-    border-radius: 5px;
+    padding: 16px 45px;
+    border-radius: 3px;
 }
 
 .address iframe {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 0%;
     transform: translateY(-50%);
+    border: none;
 }
 
 .motto {
     font-size: 36px;
-    line-height: 36px;
     color: #000000;
 }
 
 .special-offer {
     font-size: 16px;
-    line-height: 22px;
     color: #444444;
 }
 
@@ -917,7 +968,7 @@ ul.segment-list {
     display: flex;
     justify-content: space-between;
     padding-left: 0;
-    margin-right: 140px;
+    margin-right: 130px;
 }
 
 .footer-container {
@@ -929,6 +980,11 @@ ul.segment-list {
 .footer-text {
     display: flex;
     flex-direction: column;
+}
+
+.footer-text p {
+    margin-top: 19px;
+    margin-bottom: -8px;
 }
 
 
@@ -1269,17 +1325,22 @@ legend.filter-gap-cost {
 
 .example-item-block {
     position: relative;
-    margin-bottom: 26px;
+    margin-bottom: 31px;
     margin-left: -2px;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .example-item {
     border: 1px solid #e5e5e5;
 }
 
+.example-item-block img {
+    display: block;
+}
+
 .example-item-block.example-item-block-last {
-    margin-bottom: 54px;
+    margin-bottom: 57px;
 }
 
 .example-dot {
@@ -1341,8 +1402,8 @@ legend.filter-gap-cost {
 
 .descript-text {
     padding-bottom: 30px;
-    padding-right: 84px;
-    padding-left: 84px;
+    padding-right: 67px;
+    padding-left: 67px;
     color: #666666;
     margin: 0;
     margin-top: 18px;
@@ -1352,8 +1413,8 @@ legend.filter-gap-cost {
     display: block;
     background-color: #fb565a;
     padding: 16px 55px;
-    border-radius: 5px;
-    margin-bottom: 49px;
+    border-radius: 3px;
+    margin-bottom: 44px;
     margin-right: 80px;
     margin-left: 80px;
 }
