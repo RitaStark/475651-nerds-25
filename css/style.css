@@ -481,6 +481,7 @@ a.write-us-button {
     line-height: 45px;
     margin: 0;
     margin-bottom: 50px;
+    font-weight: bold;
 }
 
 .write-us-item {
@@ -815,9 +816,6 @@ ul.segment-list {
     margin-right: 120px;
 }
 
-
-/*а можно не писать все это правило ниже с перечислениями, а применить как-то правильно :not , чтобы просто исключить из списка последнего ребенка? у меня не получилось :(*/
-
 .client-htmlacademy::after {
     content: "";
     position: absolute;
@@ -930,9 +928,6 @@ ul.segment-list {
     font-size: 16px;
     color: #444444;
 }
-
-
-/*иконки не совсем по центру*/
 
 .social-button {
     display: flex;
@@ -1182,9 +1177,6 @@ legend.filter-gap-cost {
     background-repeat: no-repeat;
     opacity: 0.4;
 }
-
-
-/*почему в случае с радиокнопками мне нужно было отдельно выбирать выбранный пунк чтобы hover задать, а тут так не сработало*/
 
 .filter-item-checkbox label:hover::before,
 .filter-type-checkbox:checked+label:hover::before {
@@ -1538,6 +1530,10 @@ legend.filter-gap-cost {
 .catalog-right-col {
     display: flex;
     flex-direction: column;
+}
+
+iframe {
+    border: 1px;
 }
 
 
