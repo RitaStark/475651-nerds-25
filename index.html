@@ -4,17 +4,17 @@
 <head>
     <meta charset="utf-8">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <title>Магазин готовых шаблонов Nerds</title>
 </head>
 
 <body>
-    <header>
+    <header class="main-header">
         <div class="content-size">
             <nav class="main-menu">
                 <a href="#" class="nerds-logo">
-                    <img src="img/svg-nerds/nerds-logo.svg" alt="Логотип студии Nerds">
+                    <img src="img/svg-nerds/nerds-logo.svg" alt="Логотип студии Nerds" width="160" height="65">
                 </a>
 
                 <div class="navigation-container">
@@ -65,7 +65,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="main">
         <section class="segments content-size">
             <h2 class="none">Сегменты</h2>
             <ul class="segment-list ls-none">
@@ -102,7 +102,7 @@
                     </ul>
                 </div>
                 <div class="right-col ">
-                    <img src="img/nerds-illustration.png" alt="Логотип студии Nerds ">
+                    <img src="img/nerds-illustration.png" alt="Логотип студии Nerds" width="360" height="208">
                     <p class="right-col-text ">с 2004 года Любим точность во всем:</p>
                     <ul class="right-col-list ls-none">
                         <li class="right-col-list-item">
@@ -121,20 +121,20 @@
                 </div>
             </div>
         </section>
-        <section class="clients content-size ">
+        <section class="clients content-size">
             <h2 class="none">Клиенты</h2>
             <ul class="clients-list ls-none ">
                 <li class="client-htmlacademy ">
-                    <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.png " alt="Логотип HTMLAcademy " class="client-logo "></a>
+                    <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.png " alt="Логотип HTMLAcademy " class="client-logo" width="199" height="68"></a>
                 </li>
                 <li class="client-barber ">
-                    <a href="http://barbershop-borodinski.webflow.io/ "><img src="img/logo-borodinski.png " alt="Логотип Барбершоп Бородинский " class="client-logo "></a>
+                    <a href="http://barbershop-borodinski.webflow.io/ "><img src="img/logo-borodinski.png " alt="Логотип Барбершоп Бородинский " class="client-logo" width="209" height="90"></a>
                 </li>
                 <li class="client-pink ">
-                    <a href="# "><img src="img/logo-pink.png " alt="Логотип компании Pink " class="client-logo "></a>
+                    <a href="# "><img src="img/logo-pink.png " alt="Логотип компании Pink " class="client-logo " width="185" height="52"></a>
                 </li>
                 <li class="client-mishka ">
-                    <a href="# "><img src="img/logo-mishka.png " alt="Логотип компании Mishka " class="client-logo "></a>
+                    <a href="# "><img src="img/logo-mishka.png " alt="Логотип компании Mishka " class="client-logo " width="173" height="84"></a>
                 </li>
             </ul>
         </section>
@@ -169,13 +169,13 @@
                         </div>
 
                         <div class="write-us-item write-us-item-mail">
-                            <label>Ваш e-mail</label>
-                            <input type="email" name="user-email" placeholder="example@mail.com">
+                            <label for="email-id">Ваш e-mail</label>
+                            <input type="email" name="user-email" placeholder="example@mail.com" id="email-id">
                         </div>
 
                         <div class="write-us-item write-us-text">
-                            <label>Текст письма</label>
-                            <textarea name="user-text" placeholder="В свободной форме"></textarea>
+                            <label for="write-us-text-id">Текст письма</label>
+                            <textarea name="user-text" placeholder="В свободной форме" id="write-us-text-id"></textarea>
                         </div>
 
                     </div>
@@ -188,16 +188,16 @@
 
     </main>
 
-    <footer class="footer-container">
+    <footer class="footer-container content-size">
         <ul class="social-list ls-none">
             <li class="social-icon">
-                <a class="social-button" href="# " aria-label="Ссылка во Вконтакте"><img src="img/svg-nerds/vk-icon.svg " alt="Логотип Вконтакте" class="social-img"></a>
+                <a class="social-button" href="# " aria-label="Ссылка во Вконтакте"><img src="img/svg-nerds/vk-icon.svg " alt="Логотип Вконтакте" class="social-img" width="26" height="15"></a>
             </li>
             <li class="social-icon">
-                <a class="social-button " href="# " aria-label="Ссылка на Фейсбук"><img src="img/svg-nerds/fb-icon.svg" alt="Логотип Фейсбук" class="social-img"></a>
+                <a class="social-button " href="# " aria-label="Ссылка на Фейсбук"><img src="img/svg-nerds/fb-icon.svg" alt="Логотип Фейсбук" class="social-img" width="12" height="22"></a>
             </li>
             <li class="social-icon">
-                <a class="social-button " href="#" aria-label="Ссылка в Инстаграм"><img src="img/svg-nerds/insta-icon.svg" alt="Логотип Инстаграм" class="social-img"></a>
+                <a class="social-button " href="#" aria-label="Ссылка в Инстаграм"><img src="img/svg-nerds/insta-icon.svg" alt="Логотип Инстаграм" class="social-img" width="21" height="21"></a>
             </li>
         </ul>
         <div class="footer-text">

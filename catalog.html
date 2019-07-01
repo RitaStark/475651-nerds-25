@@ -4,17 +4,17 @@
 <head>
     <meta charset="utf-8">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <title>Магазин готовых шаблонов Nerds</title>
 </head>
 
 <body class="inner-page">
-    <header>
+    <header class="main-header">
         <div class="content-size">
             <nav class="main-menu">
                 <a href="index.html" class="nerds-logo">
-                    <img src="img/svg-nerds/nerds-logo.svg" alt="Логотип студии Nerds">
+                    <img src="img/svg-nerds/nerds-logo.svg" alt="Логотип студии Nerds" width="160" height="65">
                 </a>
                 <div class="navigation-wrapper">
                     <div class="navigation-container">
@@ -35,7 +35,7 @@
     </header>
 
     <main>
-        <div class="main-wrapper">
+        <div class="main-wrapper content-size">
             <section class="parameter">
                 <h2 class="none">Фильтры</h2>
                 <form class="filter" method="get" action="https://echo.htmlacademy.ru">
@@ -126,64 +126,84 @@
                 <section class="examples">
                     <h2 class="none">Фильтры</h2>
                     <div class="examples-container">
-                        <div class="example-item-block">
+                        <section class="example-item-block">
                             <div class="example-dot-wrap">
                                 <div class="example-dot"></div>
                                 <div class="example-dot"></div>
                                 <div class="example-dot"></div>
                             </div>
-                            <img class="example-item item-sedona" src="img/img-sedona.jpg" alt="Макет сайта туристичской компании Sedona">
+                            <img class="example-item item-sedona" src="img/img-sedona.jpg" alt="Макет сайта туристичской компании Sedona" width="362" height="578">
                             <div class="example-item-description">
                                 <a href="#" class="descript-header">Sedona</a>
                                 <p class="descript-text text-option-usual">Информацонный сайт для туристов</p>
                                 <a href="#" class="button-type descript-button" aria-label="Кнопка заказа с указанием стоимости">9 900 руб.</a>
                             </div>
-                        </div>
-                        <div class="example-item-block">
+                        </section>
+                        <section class="example-item-block">
                             <div class="example-dot-wrap">
                                 <div class="example-dot"></div>
                                 <div class="example-dot"></div>
                                 <div class="example-dot"></div>
                             </div>
-                            <img class="example-item" src="img/img-pink.jpg" alt="Макет сайта компании Pink">
+                            <img class="example-item" src="img/img-pink.jpg" alt="Макет сайта компании Pink" width="362" height="578">
                             <div class="example-item-description">
-                                <a href="#" class="descript-header">Pink app</a>
+                                <a href="#" class="descript-header">Pink</a>
                                 <p class="descript-text text-option-usual">Продуктовый лендинг приложения для iOS и Android</p>
                                 <a href="#" class="button-type descript-button" aria-label="Кнопка заказа с указанием стоимости">9 900 руб.</a>
                             </div>
-                        </div>
-                        <div class="example-item-block">
+                        </section>
+                        <section class="example-item-block">
                             <div class="example-dot-wrap">
                                 <div class="example-dot"></div>
                                 <div class="example-dot"></div>
                                 <div class="example-dot"></div>
                             </div>
-                            <img class="example-item" src="img/img-barbershop.jpg" alt="Макет сайта Барбершопа Бородинский">
-                        </div>
-                        <div class="example-item-block">
+                            <img class="example-item" src="img/img-barbershop.jpg" alt="Макет сайта Барбершопа Бородинский" width="362" height="578">
+                            <div class="example-item-description">
+                                <a href="#" class="descript-header">Borodinski</a>
+                                <p class="descript-text text-option-usual">Барбершоп</p>
+                                <a href="#" class="button-type descript-button" aria-label="Кнопка заказа с указанием стоимости">9 900 руб.</a>
+                            </div>
+                        </section>
+                        <section class="example-item-block">
                             <div class="example-dot-wrap">
                                 <div class="example-dot"></div>
                                 <div class="example-dot"></div>
                                 <div class="example-dot"></div>
                             </div>
-                            <img class="example-item" src="img/img-mishka.jpg" alt="Макет сайта магазина вязаных игрушек Mishka">
-                        </div>
-                        <div class="example-item-block example-item-block-last">
+                            <img class="example-item" src="img/img-mishka.jpg" alt="Макет сайта магазина вязаных игрушек Mishka" width="362" height="578">
+                            <div class="example-item-description">
+                                <a href="#" class="descript-header">Mishka</a>
+                                <p class="descript-text text-option-usual">Милые штучки ручной работы</p>
+                                <a href="#" class="button-type descript-button" aria-label="Кнопка заказа с указанием стоимости">9 900 руб.</a>
+                            </div>
+                        </section>
+                        <section class="example-item-block example-item-block-last">
                             <div class="example-dot-wrap">
                                 <div class="example-dot"></div>
                                 <div class="example-dot"></div>
                                 <div class="example-dot"></div>
                             </div>
-                            <img class="example-item" src="img/img-aplus.jpg" alt="Макет сайта курсов А+">
-                        </div>
-                        <div class="example-item-block example-item-block-last">
+                            <img class="example-item" src="img/img-aplus.jpg" alt="Макет сайта курсов А+" width="362" height="578">
+                            <div class="example-item-description">
+                                <a href="#" class="descript-header">A+</a>
+                                <p class="descript-text text-option-usual">Сайт курсов</p>
+                                <a href="#" class="button-type descript-button" aria-label="Кнопка заказа с указанием стоимости">9 900 руб.</a>
+                            </div>
+                        </section>
+                        <section class="example-item-block example-item-block-last">
                             <div class="example-dot-wrap">
                                 <div class="example-dot"></div>
                                 <div class="example-dot"></div>
                                 <div class="example-dot"></div>
                             </div>
-                            <img class="example-item" src="img/img-kvast.jpg" alt="Макет сайта производителя кваса Кваст">
-                        </div>
+                            <img class="example-item" src="img/img-kvast.jpg" alt="Макет сайта производителя кваса Кваст" width="362" height="578">
+                            <div class="example-item-description">
+                                <a href="#" class="descript-header">Кваст</a>
+                                <p class="descript-text text-option-usual">Производитель кваса</p>
+                                <a href="#" class="button-type descript-button" aria-label="Кнопка заказа с указанием стоимости">9 900 руб.</a>
+                            </div>
+                        </section>>
                     </div>
                 </section>
 
@@ -223,12 +243,12 @@
                             <input type="text" name="user-name" placeholder="Имя Фамилия" id="user-name-id" required>
                         </div>
                         <div class="write-us-item write-us-item-mail">
-                            <label>Ваш e-mail</label>
-                            <input type="email" name="user-email" placeholder="example@mail.com">
+                            <label for="email-id">Ваш e-mail</label>
+                            <input type="email" name="user-email" placeholder="example@mail.com" id="email-id">
                         </div>
                         <div class="write-us-item write-us-text">
-                            <label>Текст письма</label>
-                            <textarea name="user-text" placeholder="В свободной форме"></textarea>
+                            <label for="write-us-text-id">Текст письма</label>
+                            <textarea name="user-text" placeholder="В свободной форме" id="write-us-text-id"></textarea>
                         </div>
                     </div>
                     <button type="submit" class="write-us-send text-option-usual button-type">Отправить</button>
@@ -237,16 +257,16 @@
         </section>
     </main>
 
-    <footer class="footer-container">
+    <footer class="footer-container content-size">
         <ul class="social-list ls-none">
             <li class="social-icon">
-                <a class="social-button" href="#" aria-label="Ссылка во Вконтакте"><img src="img/svg-nerds/vk-icon.svg" alt="Логотип Вконтакте" class="social-img"></a>
+                <a class="social-button" href="#" aria-label="Ссылка во Вконтакте"><img src="img/svg-nerds/vk-icon.svg" alt="Логотип Вконтакте" class="social-img" width="26" height="15"></a>
             </li>
             <li class="social-icon">
-                <a class="social-button" href="#" aria-label="Ссылка на Фейсбук"><img src="img/svg-nerds/fb-icon.svg" alt="Логотип Фейсбук" class="social-img"></a>
+                <a class="social-button" href="#" aria-label="Ссылка на Фейсбук"><img src="img/svg-nerds/fb-icon.svg" alt="Логотип Фейсбук" class="social-img" width="12" height="22"></a>
             </li>
             <li class="social-icon">
-                <a class="social-button" href="#" aria-label="Ссылка в Инстаграм"><img src="img/svg-nerds/insta-icon.svg" alt="Логотип Инстаграм" class="social-img"></a>
+                <a class="social-button" href="#" aria-label="Ссылка в Инстаграм"><img src="img/svg-nerds/insta-icon.svg" alt="Логотип Инстаграм" class="social-img" width="21" height="21"></a>
             </li>
         </ul>
         <div class="footer-text">

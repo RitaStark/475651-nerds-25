@@ -1,15 +1,16 @@
 body {
     padding: 0;
-    font-family: "Roboto", Arial, sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
     margin: 0 auto;
 }
 
 .content-size {
-    width: 1440px;
+    width: 1200px;
+    box-sizing: border-box;
     margin: 0 auto;
 }
 
-header {
+.main-header {
     background-color: #eeeeee;
 }
 
@@ -80,10 +81,8 @@ a {
     min-height: 65px;
     display: flex;
     align-items: center;
-    padding-top: 45px;
-    padding-bottom: 15px;
-    margin-left: 140px;
-    width: 1160px;
+    padding: 45px 20px 15px 20px;
+    margin: 0 auto;
 }
 
 .site-navigation {
@@ -130,8 +129,7 @@ a {
     position: absolute;
     right: 98px;
     top: 15px;
-    background-image: url("../img/cart-icon.png");
-    background-repeat: no-repeat;
+    background: url("../img/cart-icon.png") no-repeat;
     opacity: 0.3;
     width: 18px;
     height: 18px;
@@ -270,21 +268,15 @@ a {
 }
 
 .slider-item:nth-child(1) {
-    background-image: url("../img/nerds-index-slide1.png");
-    background-repeat: no-repeat;
-    background-position: 99% -20px;
+    background: #eeeeee url("../img/nerds-index-slide1.png") no-repeat 99% -20px;
 }
 
 .slider-item:nth-child(2) {
-    background-image: url("../img/nerds-index-slide2.png");
-    background-repeat: no-repeat;
-    background-position: 100% 0;
+    background: #eeeeee url("../img/nerds-index-slide2.png") no-repeat 100% 0;
 }
 
 .slider-item:nth-child(3) {
-    background-image: url("../img/nerds-index-slide3.png");
-    background-repeat: no-repeat;
-    background-position: 100% 0;
+    background: #eeeeee url("../img/nerds-index-slide3.png") no-repeat 100% 0;
 }
 
 #slider-1:checked~.slider-list .slider-item-one {
@@ -504,8 +496,7 @@ a.write-us-button {
 .write-us-close-button {
     position: absolute;
     content: "";
-    background-image: url("../img/svg-nerds/close-cross.svg");
-    background-repeat: no-repeat;
+    background: url("../img/svg-nerds/close-cross.svg") no-repeat;
     opacity: 0.3;
     width: 21px;
     height: 21px;
@@ -546,12 +537,16 @@ ul.segment-list {
     text-align: center;
 }
 
+.segments {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .segment-list {
     display: flex;
     justify-content: space-between;
-    width: 1100px;
-    margin-left: 140px;
     margin-bottom: 80px;
+    margin-right: 60px;
     flex-wrap: wrap;
     overflow: auto;
 }
@@ -591,8 +586,7 @@ ul.segment-list {
 }
 
 .segment-item-wed::before {
-    background-image: url(../img/illustration-1.jpg);
-    background-repeat: no-repeat;
+    background: #fb565a url(../img/illustration-1.jpg) no-repeat;
     width: 100%;
     height: 146px;
     content: "";
@@ -619,8 +613,7 @@ ul.segment-list {
 }
 
 .segment-item-app::before {
-    background-image: url(../img/illustration-2.jpg);
-    background-repeat: no-repeat;
+    background: #00ca74 url(../img/illustration-2.jpg) no-repeat;
     width: 100%;
     height: 146px;
     content: "";
@@ -647,8 +640,7 @@ ul.segment-list {
 }
 
 .segment-item-presentations::before {
-    background-image: url(../img/illustration-3.jpg);
-    background-repeat: no-repeat;
+    background: #efc849 url(../img/illustration-3.jpg) no-repeat;
     width: 100%;
     height: 146px;
     content: "";
@@ -657,23 +649,28 @@ ul.segment-list {
     top: 0;
 }
 
-.clients,
-.main-menu,
+
+/* .clients,
 .footer-container,
 .header {
     width: 1160px;
+} */
+
+.main {
+    /* width: 1200px; */
+    margin: 0 auto;
 }
 
 .about-us {
-    margin-bottom: 44px;
+    margin: 0 auto 44px auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .about-us-container {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto auto 140px;
-    width: 1160px;
-    padding-top: 43px;
+    padding: 43px 0 0 0;
     border-top: 2px solid #eeeeee;
 }
 
@@ -775,7 +772,7 @@ ul.segment-list {
     border-bottom: 2px solid #eeeeee;
     padding-top: 51px;
     padding-bottom: 35px;
-    margin-bottom: 80px;
+    margin: 0 auto 80px auto
 }
 
 .clients img {
@@ -793,11 +790,11 @@ ul.segment-list {
 
 .clients-list {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding-left: 0;
-    width: 1100px;
+    padding-left: 50px;
+    padding-right: 50px;
     margin: 0 auto;
 }
 
@@ -850,8 +847,7 @@ ul.segment-list {
 }
 
 .address {
-    background-image: url(../img/map-and-marker.jpg);
-    background-repeat: no-repeat;
+    background: #e9e5dc url(../img/map-and-marker.jpg) no-repeat;
     min-height: 416px;
     background-position: center;
     width: 1440px;
@@ -970,6 +966,8 @@ ul.segment-list {
     display: flex;
     justify-content: flex-start;
     margin: 0 auto 45px auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .footer-text {
@@ -1257,8 +1255,7 @@ legend.filter-gap-cost {
     height: 11px;
     top: 0;
     left: 0;
-    background-image: url("../img/svg-nerds/icon-down-dir.svg");
-    background-repeat: no-repeat;
+    background: url("../img/svg-nerds/icon-down-dir.svg") no-repeat;
 }
 
 .sort-button-active {
@@ -1289,8 +1286,9 @@ legend.filter-gap-cost {
 
 .main-wrapper {
     display: flex;
-    width: 1160px;
     margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .parameter {
@@ -1318,7 +1316,6 @@ legend.filter-gap-cost {
 .example-item-block {
     position: relative;
     margin-bottom: 31px;
-    margin-left: -2px;
     overflow: hidden;
     box-sizing: border-box;
 }
@@ -1463,7 +1460,6 @@ legend.filter-gap-cost {
 }
 
 .price-controls input {
-    font-family: Roboto, Arial, sans-serif;
     font-size: 16px;
     text-align: center;
     color: #283136;
