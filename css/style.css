@@ -162,6 +162,8 @@ a {
     position: relative;
     background-color: #eeeeee;
     width: 1160px;
+    padding-right: 20px;
+    padding-left: 20px;
     margin: 0 auto;
     min-height: 412px;
 }
@@ -213,6 +215,7 @@ a {
 
 .slider-controls {
     display: inline-block;
+    vertical-align: middle;
     border-radius: 50%;
     cursor: pointer;
     padding: 8px;
@@ -222,7 +225,6 @@ a {
     z-index: 100;
     width: 160px;
     height: 18px;
-    text-align: center;
     font-size: 0;
     transform: translateX(-50%);
 }
@@ -230,6 +232,7 @@ a {
 .slider-controls label {
     position: relative;
     display: inline-block;
+    vertical-align: middle;
     width: 18px;
     height: 18px;
     padding: 8px;
@@ -545,7 +548,7 @@ ul.segment-list {
 .segment-list {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     margin-right: 60px;
     flex-wrap: wrap;
     overflow: auto;
@@ -566,6 +569,7 @@ ul.segment-list {
     position: relative;
     max-width: 300px;
     padding-top: 146px;
+    margin-bottom: 20px;
 }
 
 
@@ -796,6 +800,7 @@ ul.segment-list {
     padding-left: 50px;
     padding-right: 50px;
     margin: 0 auto;
+    position: relative;
 }
 
 .client-htmlacademy,
@@ -810,39 +815,39 @@ ul.segment-list {
 }
 
 .client-pink {
-    margin-right: 120px;
+    margin-right: 121px;
 }
 
-.client-htmlacademy::after {
+.client-mishka {
+    margin-right: 10px;
+}
+
+.clients-list li:not(:last-child)::after {
     content: "";
     position: absolute;
     width: 2px;
     height: 52px;
     background-color: #eeeeee;
+    top: 50%;
+    right: 58px;
+    transform: translateY(-50%);
+}
+
+.client-htmlacademy::after {
     top: 28px;
     left: 249px;
     transform: translateY(-50%);
 }
 
 .client-barber::after {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 52px;
-    background-color: #eeeeee;
     top: 40px;
-    left: 253px;
+    left: 252px;
     transform: translateY(-50%);
 }
 
 .client-pink::after {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 52px;
-    background-color: #eeeeee;
     top: 21px;
-    left: 241px;
+    left: 239px;
     transform: translateY(-50%);
 }
 
@@ -850,7 +855,6 @@ ul.segment-list {
     background: #e9e5dc url(../img/map-and-marker.jpg) no-repeat;
     min-height: 416px;
     background-position: center;
-    width: 1440px;
     position: relative;
     margin: 0 auto 53px auto;
 }
@@ -910,9 +914,11 @@ ul.segment-list {
 .address iframe {
     position: absolute;
     top: 50%;
-    left: 0%;
+    left: 0;
     transform: translateY(-50%);
     border: none;
+    width: 100vw;
+    margin: 0 auto;
 }
 
 .motto {
@@ -1322,6 +1328,7 @@ legend.filter-gap-cost {
 
 .example-item {
     border: 1px solid #e5e5e5;
+    box-sizing: border-box;
 }
 
 .example-item-block img {
@@ -1457,6 +1464,7 @@ legend.filter-gap-cost {
     width: 50%;
     font-size: 16px;
     text-transform: uppercase;
+    vertical-align: middle;
 }
 
 .price-controls input {
