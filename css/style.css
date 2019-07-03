@@ -401,19 +401,6 @@ a.write-us-button {
     display: flex;
 }
 
-.write-us-item input[type="text"],
-.write-us-item input[type="email"] {
-    font: inherit;
-    font-weight: 400;
-    opacity: 0.5;
-    border: 2px solid #d7dcde;
-    border-radius: 3px;
-    min-height: 50px;
-    padding-left: 14px;
-    padding-right: 14px;
-    color: #b1b1b1;
-}
-
 .write-us-item input[type="email"]:focus::placeholder,
 .write-us-item input[type="text"]:focus::placeholder,
 .write-us-item textarea:focus::placeholder {
@@ -518,6 +505,23 @@ a.write-us-button {
 
 .write-us-close-button:active {
     opacity: 0.1;
+}
+
+.write-us-item input[type="text"],
+.write-us-item input[type="email"] {
+    font: inherit;
+    font-weight: 400;
+    opacity: 0.5;
+    border: 2px solid #d7dcde;
+    border-radius: 3px;
+    min-height: 50px;
+    padding-left: 14px;
+    padding-right: 14px;
+    color: black;
+}
+
+.write-us-item textarea {
+    color: #444444;
 }
 
 ul.segment-list {
@@ -853,14 +857,14 @@ ul.segment-list {
 
 .address {
     background: #e9e5dc url(../img/map-and-marker.jpg) no-repeat;
-    min-height: 416px;
     background-position: center;
+    /* width: 1200px; */
+    min-height: 416px;
     position: relative;
     margin: 0 auto 53px auto;
 }
 
 .address-detail-wrapper {
-    width: 1160px;
     min-height: 416px;
     position: relative;
 }
@@ -917,7 +921,7 @@ ul.segment-list {
     left: 0;
     transform: translateY(-50%);
     border: none;
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
 }
 
