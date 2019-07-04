@@ -657,15 +657,7 @@ ul.segment-list {
     top: 0;
 }
 
-
-/* .clients,
-.footer-container,
-.header {
-    width: 1160px;
-} */
-
 .main {
-    /* width: 1200px; */
     margin: 0 auto;
 }
 
@@ -862,11 +854,10 @@ ul.segment-list {
 }
 
 .address-detail-wrapper {
-    background: #e9e5dc url(../img/map-and-marker.jpg) no-repeat;
-    background-position: center;
-    width: 1200px;
     min-height: 416px;
     position: relative;
+    background: #e9e5dc url(../img/map-and-marker.jpg) no-repeat;
+    background-position: center;
 }
 
 .address-details {
@@ -881,6 +872,7 @@ ul.segment-list {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    z-index: 100;
 }
 
 .address-details-header {
@@ -917,12 +909,12 @@ ul.segment-list {
 
 .address iframe {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
-    transform: translateY(-50%);
     border: none;
     width: 100%;
     margin: 0 auto;
+    z-index: 10;
 }
 
 .motto {
