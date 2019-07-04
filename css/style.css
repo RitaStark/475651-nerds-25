@@ -856,15 +856,15 @@ ul.segment-list {
 }
 
 .address {
-    background: #e9e5dc url(../img/map-and-marker.jpg) no-repeat;
-    background-position: center;
-    /* width: 1200px; */
     min-height: 416px;
     position: relative;
     margin: 0 auto 53px auto;
 }
 
 .address-detail-wrapper {
+    background: #e9e5dc url(../img/map-and-marker.jpg) no-repeat;
+    background-position: center;
+    width: 1200px;
     min-height: 416px;
     position: relative;
 }
@@ -875,7 +875,7 @@ ul.segment-list {
     width: 269px;
     min-height: 309px;
     padding-left: 51px;
-    margin-left: -1px;
+    margin-left: 20px;
     position: absolute;
     content: "";
     top: 50%;
