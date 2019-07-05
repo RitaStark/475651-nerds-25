@@ -761,6 +761,7 @@ ul.segment-list {
 .right-col-item-name {
     margin-top: 0;
     margin-left: 2px;
+    width: 105px;
 }
 
 .super {
